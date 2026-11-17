@@ -48,6 +48,7 @@ const state = {
 // ================= INICIALIZAÇÃO =================
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initTrialSystem();
   initKeyboardShortcuts();
   carregarFiltrosDropdown();
   carregarQuestoes();
@@ -1279,5 +1280,104 @@ function compartilharApp() {
     });
   } else {
     prompt('Copie o link abaixo para enviar ao grupo:', url);
+  }
+}
+
+// ================= SISTEMA DE PERÍODO DE TESTE (5 DIAS) =================
+const TRIAL_CONFIG = {
+  DIAS_TESTE: 5,
+  CHAVE_STORAGE_INICIO: 'aprovaquest_trial_start_v1',
+  CHAVE_STORAGE_VIP: 'aprovaquest_vip_unlocked_v1',
+  CHAVES_VALIDAS: ['VIP2026', 'APROVA2026', 'ADMIN2026', 'CONCURSEIRO2026']
+};
+
+function initTrialSystem() {
+  const badge = document.getElementById('badge-trial');
+  const txt = document.getElementById('trial-tempo-txt');
+
+  // 1. Verificar se possui chave VIP desbloqueada
+  if (localStorage.getItem(TRIAL_CONFIG.CHAVE_STORAGE_VIP) === 'true') {
+    if (badge) {
+      badge.classList.remove('hidden');
+      badge.className = 'flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 shadow-sm';
+      badge.innerHTML = '<i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i><span>Acesso VIP Vitalício</span>';
+      if (window.lucide) lucide.createIcons();
+    }
+    return;
+  }
+
+  // 2. Verificar primeiro acesso
+  let inicio = localStorage.getItem(TRIAL_CONFIG.CHAVE_STORAGE_INICIO);
+  if (!inicio) {
+    inicio = Date.now().toString();
+    localStorage.setItem(TRIAL_CONFIG.CHAVE_STORAGE_INICIO, inicio);
+  }
+
+  const tempoInicio = parseInt(inicio, 10);
+  const agora = Date.now();
+  const limiteMs = TRIAL_CONFIG.DIAS_TESTE * 24 * 60 * 60 * 1000;
+  const decorridoMs = agora - tempoInicio;
+  const restanteMs = limiteMs - decorridoMs;
+
+  if (restanteMs <= 0) {
+    // EXPIRADO!
+    exibirTelaBloqueioTrial();
+  } else {
+    // ATIVO DENTRO DOS 5 DIAS
+    const dias = Math.ceil(restanteMs / (24 * 60 * 60 * 1000));
+    const horas = Math.ceil(restanteMs / (60 * 60 * 1000));
+
+    if (badge && txt) {
+      badge.classList.remove('hidden');
+      if (dias > 1) {
+        txt.textContent = `Acesso VIP: ${dias} dias restantes`;
+      } else {
+        txt.textContent = `Acesso VIP: ${horas}h restantes`;
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+  }
+}
+
+function exibirTelaBloqueioTrial() {
+  const modal = document.getElementById('modal-trial-expirado');
+  if (modal) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function validarChaveVIP() {
+  const input = document.getElementById('input-chave-vip');
+  const chave = (input ? input.value : '').trim().toUpperCase();
+
+  if (TRIAL_CONFIG.CHAVES_VALIDAS.includes(chave)) {
+    localStorage.setItem(TRIAL_CONFIG.CHAVE_STORAGE_VIP, 'true');
+    alert('🎉 Parabéns! Sua Chave VIP foi validada com sucesso. O seu acesso ao AprovaQuest agora é ILIMITADO!');
+    const modal = document.getElementById('modal-trial-expirado');
+    if (modal) modal.classList.add('hidden');
+    document.body.style.overflow = '';
+    window.location.reload();
+  } else {
+    alert('❌ Chave VIP não reconhecida. Envie uma mensagem no WhatsApp do desenvolvedor para receber seu acesso.');
+  }
+}
+
+function abrirWhatsAppFeedback() {
+  const msg = encodeURIComponent('Olá! Participei do teste de 5 dias do AprovaQuest no grupo de concurseiros. Gostei muito da ferramenta e gostaria de dar meu feedback para continuar com acesso!');
+  window.open(`https://wa.me/?text=${msg}`, '_blank');
+}
+
+function copiarFeedbackTexto() {
+  const texto = '🚀 Avaliação do Teste AprovaQuest:\n\n1. O que mais gostei no app: \n2. O que senti falta / sugestão de melhoria: \n3. Recomendo para amigos concurseiros? (Sim/Não): \n\nParabéns pelo projeto!';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(texto).then(() => {
+      alert('📋 Modelo de avaliação copiado! Basta colar no WhatsApp e nos enviar seu feedback.');
+    }).catch(() => {
+      prompt('Copie o texto abaixo para enviar:', texto);
+    });
+  } else {
+    prompt('Copie o texto abaixo para enviar:', texto);
   }
 }

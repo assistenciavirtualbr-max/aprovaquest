@@ -104,6 +104,12 @@
           <span>Compartilhar</span>
         </button>
 
+        <!-- Selo de Período de Testes (5 Dias) -->
+        <div id="badge-trial" class="hidden flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800 shadow-sm">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-500 animate-pulse"></i>
+          <span id="trial-tempo-txt">Acesso VIP: 5 dias</span>
+        </div>
+
         <!-- Toggle Modo Escuro / Claro -->
         <button id="theme-toggle" onclick="toggleDarkMode()" title="Alternar Modo Escuro" class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
           <i data-lucide="moon" id="icon-moon" class="w-5 h-5 hidden dark:block"></i>
@@ -808,6 +814,50 @@
   </nav>
 
   <!-- Script da Aplicação -->
+  <!-- ================= MODAL PERÍODO DE TESTE EXPIRADO (5 DIAS) ================= -->
+  <div id="modal-trial-expirado" class="hidden fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl text-center space-y-5 animate-in fade-in zoom-in duration-300">
+      
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-brand-600 text-white flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20 text-3xl font-black">
+        ⏳
+      </div>
+
+      <div>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800 mb-2">
+          Período de Testes de 5 Dias Concluído
+        </span>
+        <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Seu Acesso Antecipado Encerrou</h3>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+          Esperamos que o banco de 100 questões comentadas, simulados e cadernos de erros tenham impulsionado seus estudos! Como você fez parte do nosso grupo pioneiro de testes, envie seu feedback ou solicite uma extensão de acesso direto com o desenvolvedor.
+        </p>
+      </div>
+
+      <div class="space-y-3 pt-2">
+        <button onclick="abrirWhatsAppFeedback()" class="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Falar com o Desenvolvedor no WhatsApp</span>
+        </button>
+
+        <button onclick="copiarFeedbackTexto()" class="w-full py-2.5 px-4 rounded-xl font-semibold text-xs border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center gap-2 transition-colors">
+          <i data-lucide="copy" class="w-4 h-4"></i>
+          <span>Copiar Mensagem de Avaliação</span>
+        </button>
+      </div>
+
+      <!-- Área de Desbloqueio com Chave VIP -->
+      <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+        <p class="text-[11px] text-slate-400 mb-2">Possui uma Chave de Acesso VIP?</p>
+        <div class="flex items-center gap-2 max-w-xs mx-auto">
+          <input type="text" id="input-chave-vip" placeholder="Digite sua Chave VIP" class="flex-1 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-center uppercase tracking-wider font-mono">
+          <button onclick="validarChaveVIP()" class="px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition-colors">
+            Ativar
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script src="storage-adapter.js"></script>
   <script src="app.js"></script>
   <script>
