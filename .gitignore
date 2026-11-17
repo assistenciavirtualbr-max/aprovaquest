@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+data/user_data.json
+public/data/user_data.json
+gerar_banco_robusto.py
+expandir_lote2.py

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "caixa_tecnico_bancario",
+    "nome": "Caixa Econômica Federal",
+    "cargo": "Técnico Bancário Novo",
+    "banca": "Cesgranrio",
+    "ano": 2024,
+    "total_vagas": 4000,
+    "modulos": [
+      {
+        "nome": "Conhecimentos Básicos",
+        "disciplinas": [
+          {
+            "nome": "Língua Portuguesa",
+            "topicos": [
+              "Compreensão e interpretação de textos",
+              "Ortografia oficial e Acentuação gráfica",
+              "Emprego do sinal indicativo de crase",
+              "Sintaxe da oração e do período",
+              "Pontuação e concordância verbal e nominal"
+            ]
+          },
+          {
+            "nome": "Língua Inglesa",
+            "topicos": [
+              "Compreensão de textos em língua inglesa",
+              "Vocabulário fundamental para negócios e atendimento"
+            ]
+          },
+          {
+            "nome": "Matemática Financeira",
+            "topicos": [
+              "Razões e proporções",
+              "Juros simples e juros compostos",
+              "Taxas nominais, efetivas e equivalentes",
+              "Sistemas de amortização (SAC e Price)"
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Conhecimentos Específicos (Peso Maior)",
+        "disciplinas": [
+          {
+            "nome": "Conhecimentos Bancários",
+            "topicos": [
+              "Sistema Financeiro Nacional (CMN, Bacen, CVM)",
+              "Mercado financeiro e seus desdobramentos",
+              "Produtos bancários: CDB, LCI, LCA, Fundos e Poupança",
+              "Garantias do SFN: aval, fiança, alienação fiduciária",
+              "Prevenção à Lavagem de Dinheiro (Lei 9.613/98)"
+            ]
+          },
+          {
+            "nome": "Segurança da Informação e TI",
+            "topicos": [
+              "Segurança cibernética em transações bancárias",
+              "Phishing, Pharming, Malware e Ransomware",
+              "Assinatura digital e Certificados digitais",
+              "Lei Geral de Proteção de Dados (LGPD - Lei 13.709/18)"
+            ]
+          },
+          {
+            "nome": "Atendimento Bancário e Ética",
+            "topicos": [
+              "Técnicas de vendas e atendimento ao cliente",
+              "Resoluções CMN/Bacen sobre atendimento",
+              "Código de Ética da Caixa Econômica Federal"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "inss_tecnico_seguro_social",
+    "nome": "INSS - Instituto Nacional do Seguro Social",
+    "cargo": "Técnico do Seguro Social",
+    "banca": "Cebraspe",
+    "ano": 2024,
+    "modulos": [
+      {
+        "nome": "Conhecimentos Básicos",
+        "disciplinas": [
+          {
+            "nome": "Língua Portuguesa",
+            "topicos": [
+              "Interpretação e coesão textual",
+              "Redação oficial (Manual da Presidência)",
+              "Regência e Crase"
+            ]
+          },
+          {
+            "nome": "Direito Constitucional",
+            "topicos": [
+              "Artigo 5º da CF/88 (Direitos e Deveres)",
+              "Nacionalidade e Direitos Políticos",
+              "Administração Pública (Artigos 37 a 41)"
+            ]
+          },
+          {
+            "nome": "Direito Administrativo",
+            "topicos": [
+              "Regime Jurídico Único (Lei 8.112/1990)",
+              "Poderes da Administração e Atos Administrativos",
+              "Processo Administrativo Federal (Lei 9.784/1999)"
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Conhecimentos Específicos (70 Questões Cespe)",
+        "disciplinas": [
+          {
+            "nome": "Seguridade Social",
+            "topicos": [
+              "Conceito e princípios constitucionais da Seguridade",
+              "Segurados obrigatórios e facultativos do RGPS",
+              "Dependentes e manutenção/perda da qualidade de segurado",
+              "Benefícios em espécie: Aposentadorias, Pensão por Morte e Auxílios",
+              "Financiamento da Seguridade Social"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

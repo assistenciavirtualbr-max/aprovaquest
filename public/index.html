@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AprovaQuest - Concursos Públicos Sem Anúncios</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#4f46e5',
+              600: '#4338ca',
+              700: '#3730a3',
+              800: '#312e81',
+              900: '#1e1b4b',
+            },
+            accent: {
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              rose: '#f43f5e',
+              sky: '#0284c7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Estilos Customizados e Animações -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
+
+  <!-- ================= TOPBAR / HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logo & Título -->
+      <div class="flex items-center gap-3 cursor-pointer" onclick="navegarPara('questoes')">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white">Aprova<span class="text-brand-600 dark:text-indigo-400">Quest</span></span>
+            <span class="hidden md:inline-flex text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">
+              100% Grátis & Sem Anúncios
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:block">Estudo Ativo por Questões e Comentários Didáticos</p>
+        </div>
+      </div>
+
+      <!-- Navegação Principal Desktop -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <button onclick="navegarPara('questoes')" id="nav-questoes" class="nav-item active px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="help-circle" class="w-4 h-4"></i> Banco de Questões
+        </button>
+        <button onclick="navegarPara('simulados')" id="nav-simulados" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="timer" class="w-4 h-4"></i> Simulados
+        </button>
+        <button onclick="navegarPara('edital')" id="nav-edital" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="list-checks" class="w-4 h-4"></i> Edital Verticalizado
+        </button>
+        <button onclick="navegarPara('caderno')" id="nav-caderno" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all relative">
+          <i data-lucide="book-open" class="w-4 h-4"></i> Caderno de Erros
+          <span id="badge-caderno-topo" class="hidden absolute -top-1 -right-1 px-1.5 py-0.2 text-[10px] font-bold rounded-full bg-rose-500 text-white">0</span>
+        </button>
+        <button onclick="navegarPara('estatisticas')" id="nav-estatisticas" class="nav-item px-3.5 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all">
+          <i data-lucide="bar-chart-2" class="w-4 h-4"></i> Desempenho
+        </button>
+      </nav>
+
+      <!-- Ações do Cabeçalho (Dark Mode, Meta Diária, Adicionar) -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Indicador de Meta Diária -->
+        <div class="hidden sm:flex items-center gap-2 bg-slate-100 dark:bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700">
+          <i data-lucide="target" class="w-4 h-4 text-brand-600 dark:text-indigo-400"></i>
+          <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Hoje: <span id="meta-hoje" class="text-brand-600 dark:text-indigo-400 font-bold">0</span>/20</span>
+        </div>
+
+        <!-- Botão Criar Questão -->
+        <button onclick="abrirModalCriarQuestao()" title="Cadastrar Nova Questão" class="p-2 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+          <i data-lucide="plus-circle" class="w-5 h-5"></i>
+        </button>
+
+        <!-- Botão Compartilhar no WhatsApp / Convidar Concurseiros -->
+        <button onclick="compartilharApp()" title="Compartilhar com Grupo de Concurseiros" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500 hover:bg-emerald-600 text-white shadow-sm transition-all">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span>Compartilhar</span>
+        </button>
+
+        <!-- Toggle Modo Escuro / Claro -->
+        <button id="theme-toggle" onclick="toggleDarkMode()" title="Alternar Modo Escuro" class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+          <i data-lucide="moon" id="icon-moon" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="sun" id="icon-sun" class="w-5 h-5 block dark:hidden text-amber-500"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= CONTEÚDO PRINCIPAL (SPA) ================= -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-6 lg:p-8">
+
+    <!-- ================= VIEW 1: BANCO DE QUESTÕES ================= -->
+    <section id="view-questoes" class="view-panel block">
+      
+      <!-- Barra de Filtros e Busca Rápida -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 shadow-sm mb-6 transition-all">
+        <div class="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
+          
+          <!-- Campo de Busca Textual -->
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400"></i>
+            <input type="text" id="filtro-busca" placeholder="Buscar por palavra-chave, tema, artigo de lei, súmula..." 
+                   class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
+                   onkeydown="if(event.key === 'Enter') aplicarFiltros()">
+          </div>
+
+          <!-- Botões de Ação de Filtro -->
+          <div class="flex items-center gap-2 flex-wrap">
+            <button onclick="togglePainelFiltros()" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+              <i data-lucide="sliders-horizontal" class="w-4 h-4 text-brand-600 dark:text-indigo-400"></i> Filtros Avançados
+              <span id="filtro-badge-qtd" class="hidden px-1.5 py-0.2 rounded-full text-[11px] bg-brand-500 text-white font-bold">0</span>
+            </button>
+            <button onclick="aplicarFiltros()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition-all">
+              <i data-lucide="filter" class="w-4 h-4"></i> Filtrar
+            </button>
+            <button onclick="limparFiltros()" title="Limpar Filtros" class="p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-500 hover:text-rose-500 dark:hover:text-rose-400 transition-colors">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filtros Rápidos / Badges com 1 Clique -->
+        <div class="flex items-center gap-2 mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80 overflow-x-auto pb-1 text-xs">
+          <span class="text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">Filtros Rápidos:</span>
+          
+          <button onclick="toggleFiltroRapido('so_lei')" id="btn-filtro-lei" class="badge-quick">
+            ⚖️ Só Lei Seca
+          </button>
+          <button onclick="toggleFiltroRapido('so_sumula')" id="btn-filtro-sumula" class="badge-quick">
+            📜 Só Súmulas & STF/STJ
+          </button>
+          <button onclick="toggleFiltroRapido('nao_resolvidas')" id="btn-filtro-nao-resolvidas" class="badge-quick">
+            ✨ Somente Inéditas
+          </button>
+          <button onclick="toggleFiltroRapido('somente_erradas')" id="btn-filtro-erradas" class="badge-quick text-rose-600 dark:text-rose-400">
+            ❌ Somente Erradas
+          </button>
+          <button onclick="toggleFiltroRapido('favoritas')" id="btn-filtro-favoritas" class="badge-quick text-amber-600 dark:text-amber-400">
+            ⭐ Favoritas
+          </button>
+        </div>
+
+        <!-- Painel Expandido de Filtros Avançados (Dropdowns) -->
+        <div id="painel-filtros-avancados" class="hidden mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Banca Examinadora</label>
+            <select id="filtro-banca" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+              <option value="">Todas as Bancas</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Disciplina / Matéria</label>
+            <select id="filtro-materia" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+              <option value="">Todas as Matérias</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Assunto Específico</label>
+            <select id="filtro-assunto" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+              <option value="">Todos os Assuntos</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Tipo de Questão</label>
+            <select id="filtro-tipo" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm">
+              <option value="">Todos os Tipos</option>
+              <option value="multipla_escolha">Múltipla Escolha (A, B, C, D, E)</option>
+              <option value="certo_errado">Certo ou Errado (Cebraspe)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layout da Área de Resolução de Questões -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Coluna Principal da Questão (8 cols no Desktop) -->
+        <div class="lg:col-span-8 flex flex-col gap-4">
+          
+          <!-- Card da Questão Ativa -->
+          <div id="card-questao" class="bg-white dark:bg-slate-900 rounded-2xl p-5 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm relative transition-all">
+            
+            <!-- Barra Superior do Card (Metadados da Questão + Ações) -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
+              
+              <div class="flex flex-wrap items-center gap-1.5 text-xs font-medium">
+                <span id="badge-q-indice" class="font-bold px-2.5 py-1 rounded-lg bg-brand-50 dark:bg-indigo-950/60 text-brand-700 dark:text-indigo-300 border border-brand-200 dark:border-indigo-800">
+                  Questão 1 de 25
+                </span>
+                <span id="badge-q-banca" class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
+                  Cesgranrio
+                </span>
+                <span id="badge-q-ano" class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                  2024
+                </span>
+                <span id="badge-q-orgao" class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                  Caixa
+                </span>
+                <span id="badge-q-lei" class="hidden px-2 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                  ⚖️ Lei Seca
+                </span>
+                <span id="badge-q-sumula" class="hidden px-2 py-1 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+                  📜 Súmula
+                </span>
+              </div>
+
+              <!-- Ações da Questão: Favoritar, Caderno de Erros, Tutor IA -->
+              <div class="flex items-center gap-1.5">
+                <button onclick="toggleFavoritaAtual()" id="btn-fav-atual" title="Favoritar Questão" class="p-2 rounded-xl text-slate-400 hover:text-amber-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                </button>
+                <button onclick="toggleCadernoErrosAtual()" id="btn-caderno-atual" title="Caderno de Erros" class="p-2 rounded-xl text-slate-400 hover:text-rose-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                  <i data-lucide="bookmark" class="w-5 h-5"></i>
+                </button>
+                <button onclick="abrirTutorIA()" title="Pedir Ajuda ao Tutor IA" class="px-3 py-1.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-brand-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/80 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 font-semibold text-xs flex items-center gap-1.5 transition-all shadow-sm">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-brand-600 dark:text-indigo-400"></i> Tutor IA
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Matéria e Assunto em Destaque -->
+            <div class="py-3 flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+              <span id="q-materia" class="font-bold text-slate-700 dark:text-slate-300">Direito Constitucional</span>
+              <span>•</span>
+              <span id="q-assunto" class="text-slate-600 dark:text-slate-400">Direitos e Garantias Fundamentais</span>
+            </div>
+
+            <!-- Enunciado da Questão -->
+            <div id="q-enunciado" class="text-slate-800 dark:text-slate-100 text-base sm:text-lg leading-relaxed py-2 font-normal whitespace-pre-line">
+              Carregando questão...
+            </div>
+
+            <!-- Lista de Alternativas -->
+            <div id="q-alternativas" class="mt-6 space-y-3">
+              <!-- Renderizado dinamicamente via JS -->
+            </div>
+
+            <!-- Atalhos de Teclado Info (Desktop) -->
+            <div class="hidden md:flex items-center justify-between text-[11px] text-slate-400 mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+              <span>💡 Dica de agilidade: Pressione <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 font-mono text-[10px] border border-slate-300 dark:border-slate-700">A</kbd> a <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 font-mono text-[10px] border border-slate-300 dark:border-slate-700">E</kbd> para selecionar e <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 font-mono text-[10px] border border-slate-300 dark:border-slate-700">Enter</kbd> para responder</span>
+              <span id="q-status-resposta"></span>
+            </div>
+
+            <!-- Barra de Ações: Responder, Anterior, Próxima -->
+            <div class="flex items-center justify-between gap-3 mt-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+              <button onclick="irQuestaoAnterior()" id="btn-anterior" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2 transition-colors">
+                <i data-lucide="chevron-left" class="w-4 h-4"></i> Anterior
+              </button>
+
+              <div class="flex items-center gap-2">
+                <button onclick="confirmarResposta()" id="btn-responder" class="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md shadow-brand-500/20 flex items-center gap-2 transition-all">
+                  <i data-lucide="check-circle" class="w-4 h-4"></i> Responder
+                </button>
+              </div>
+
+              <button onclick="irProximaQuestao()" id="btn-proxima" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2 transition-colors">
+                Próxima <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Card do Comentário Pedagógico (Aparece após responder) -->
+          <div id="card-comentario" class="hidden bg-white dark:bg-slate-900 rounded-2xl p-5 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm transition-all">
+            
+            <!-- Banner de Acerto ou Erro -->
+            <div id="banner-resultado" class="mb-5 p-4 rounded-xl flex items-center gap-3">
+              <div id="icon-resultado" class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl"></div>
+              <div>
+                <h4 id="titulo-resultado" class="font-bold text-base"></h4>
+                <p id="subtitulo-resultado" class="text-xs"></p>
+              </div>
+            </div>
+
+            <!-- Abas do Comentário Pedagógico -->
+            <div class="flex border-b border-slate-200 dark:border-slate-800 gap-2 mb-4 overflow-x-auto text-xs sm:text-sm font-semibold">
+              <button onclick="trocarAbaComentario('resumo')" id="tab-resumo" class="tab-comentario active px-3.5 py-2 border-b-2 border-brand-600 text-brand-600 dark:text-indigo-400">
+                📌 Resumo Direto
+              </button>
+              <button onclick="trocarAbaComentario('alternativas')" id="tab-alternativas" class="tab-comentario px-3.5 py-2 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700">
+                🔍 Análise por Alternativa
+              </button>
+              <button onclick="trocarAbaComentario('legislacao')" id="tab-legislacao" class="tab-comentario px-3.5 py-2 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700">
+                ⚖️ Lei Seca & Súmula
+              </button>
+              <button onclick="trocarAbaComentario('pegadinha')" id="tab-pegadinha" class="tab-comentario px-3.5 py-2 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700">
+                ⚠️ Pegadinha da Banca
+              </button>
+            </div>
+
+            <!-- Conteúdo das Abas do Comentário -->
+            <div id="conteudo-tab-resumo" class="aba-conteudo block text-slate-700 dark:text-slate-300 leading-relaxed text-sm sm:text-base"></div>
+            <div id="conteudo-tab-alternativas" class="aba-conteudo hidden space-y-2.5 text-sm"></div>
+            <div id="conteudo-tab-legislacao" class="aba-conteudo hidden text-slate-700 dark:text-slate-300 leading-relaxed text-sm"></div>
+            <div id="conteudo-tab-pegadinha" class="aba-conteudo hidden text-slate-700 dark:text-slate-300 leading-relaxed text-sm"></div>
+
+          </div>
+
+        </div>
+
+        <!-- Coluna Lateral Desktop: Grade de Questões + Resumo de Desempenho (4 cols) -->
+        <div class="lg:col-span-4 flex flex-col gap-4">
+          
+          <!-- Mini Grade de Navegação das Questões -->
+          <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-bold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                <i data-lucide="layout-grid" class="w-4 h-4 text-brand-600 dark:text-indigo-400"></i> Grade de Questões
+              </h3>
+              <span id="grid-contador-total" class="text-xs text-slate-500 font-medium">0 filtradas</span>
+            </div>
+
+            <!-- Legenda da Grade -->
+            <div class="flex items-center gap-3 text-[11px] text-slate-500 mb-3 pb-2 border-b border-slate-100 dark:border-slate-800">
+              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Acerto</span>
+              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span> Erro</span>
+              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700"></span> Pendente</span>
+            </div>
+
+            <!-- Grid com números clicáveis -->
+            <div id="grid-questoes" class="grid grid-cols-5 sm:grid-cols-6 lg:grid-cols-5 gap-2 max-h-64 overflow-y-auto p-1">
+              <!-- Gerado via JS -->
+            </div>
+          </div>
+
+          <!-- Card de Produtividade Diária -->
+          <div class="bg-gradient-to-br from-indigo-900 to-brand-900 text-white rounded-2xl p-5 shadow-md relative overflow-hidden">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-indigo-200">Ritmo de Estudos</span>
+                <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+              </div>
+              <h4 class="text-2xl font-black mb-1" id="card-prod-taxa">0%</h4>
+              <p class="text-xs text-indigo-200 mb-3" id="card-prod-desc">Taxa de acertos nas questões resolvidas</p>
+              
+              <div class="w-full bg-indigo-950/80 rounded-full h-2 mb-3 overflow-hidden">
+                <div id="card-prod-progresso" class="bg-gradient-to-r from-amber-400 to-emerald-400 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-indigo-200">
+                <span>Acertos: <strong id="card-prod-acertos" class="text-white">0</strong></span>
+                <span>Erros: <strong id="card-prod-erros" class="text-white">0</strong></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= VIEW 2: MODO SIMULADO ================= -->
+    <section id="view-simulados" class="view-panel hidden">
+      
+      <!-- Seletor / Configurador do Simulado -->
+      <div id="config-simulado" class="max-w-3xl mx-auto bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="text-center mb-8">
+          <div class="w-14 h-14 rounded-2xl bg-brand-50 dark:bg-indigo-950/60 text-brand-600 dark:text-indigo-400 mx-auto flex items-center justify-center mb-3">
+            <i data-lucide="timer" class="w-8 h-8"></i>
+          </div>
+          <h2 class="text-2xl font-black text-slate-900 dark:text-white">Gerador de Simulados Sob Medida</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Treine com cronômetro real, sem ver o gabarito até o final, e receba diagnóstico completo.</p>
+        </div>
+
+        <div class="space-y-6">
+          
+          <!-- Escolha do Foco do Simulado -->
+          <div>
+            <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Qual tipo de simulado você quer realizar hoje?</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="simulado-tipo-card cursor-pointer p-4 rounded-2xl border-2 border-brand-500 bg-brand-50/40 dark:bg-indigo-950/30 flex flex-col gap-2">
+                <input type="radio" name="tipo_simulado" value="misto" checked class="hidden" onchange="atualizarFocoSimulado()">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-900 dark:text-white">Simulado Misto</span>
+                  <i data-lucide="shuffle" class="w-4 h-4 text-brand-600"></i>
+                </div>
+                <p class="text-xs text-slate-500">Todas as disciplinas misturadas, como na prova real do concurso.</p>
+              </label>
+
+              <label class="simulado-tipo-card cursor-pointer p-4 rounded-2xl border-2 border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+                <input type="radio" name="tipo_simulado" value="lei_seca" class="hidden" onchange="atualizarFocoSimulado()">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-900 dark:text-white">Foco Lei Seca</span>
+                  <i data-lucide="scale" class="w-4 h-4 text-amber-500"></i>
+                </div>
+                <p class="text-xs text-slate-500">Somente questões fundamentadas na literalidade dos artigos de lei.</p>
+              </label>
+
+              <label class="simulado-tipo-card cursor-pointer p-4 rounded-2xl border-2 border-slate-200 dark:border-slate-800 flex flex-col gap-2">
+                <input type="radio" name="tipo_simulado" value="sumula" class="hidden" onchange="atualizarFocoSimulado()">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-sm text-slate-900 dark:text-white">Foco Súmulas</span>
+                  <i data-lucide="award" class="w-4 h-4 text-purple-500"></i>
+                </div>
+                <p class="text-xs text-slate-500">Questões sobre jurisprudência e súmulas vinculantes do STF e STJ.</p>
+              </label>
+            </div>
+          </div>
+
+          <!-- Configurações Adicionais: Quantidade e Tempo -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Quantidade de Questões</label>
+              <select id="sim-qtd" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold">
+                <option value="5">5 Questões (Rápido - 10 min)</option>
+                <option value="10" selected>10 Questões (Padrão - 20 min)</option>
+                <option value="15">15 Questões (Médio - 30 min)</option>
+                <option value="25">25 Questões (Simulado Completo - 50 min)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Tempo Limite</label>
+              <select id="sim-tempo" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold">
+                <option value="10">10 Minutos</option>
+                <option value="20" selected>20 Minutos</option>
+                <option value="30">30 Minutos</option>
+                <option value="60">60 Minutos</option>
+                <option value="0">Sem Cronômetro (Modo Livre)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-center">
+            <button onclick="iniciarSimulado()" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-extrabold text-base shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="play" class="w-5 h-5 fill-current"></i> Iniciar Simulado Agora
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Área do Simulado em Execução (Oculto até iniciar) -->
+      <div id="arena-simulado" class="hidden max-w-4xl mx-auto flex flex-col gap-4">
+        
+        <!-- Barra do Simulado Ativo (Cronômetro + Progresso + Finalizar) -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span id="sim-tempo-restante" class="font-mono text-xl font-black text-brand-600 dark:text-indigo-400 bg-brand-50 dark:bg-indigo-950/60 px-3 py-1.5 rounded-xl border border-brand-200 dark:border-indigo-800">
+              20:00
+            </span>
+            <span id="sim-progresso-txt" class="text-xs font-bold text-slate-600 dark:text-slate-300">Questão 1 de 10</span>
+          </div>
+
+          <button onclick="solicitarFinalizarSimulado()" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
+            <i data-lucide="flag" class="w-4 h-4"></i> Entregar Prova
+          </button>
+        </div>
+
+        <!-- Card da Questão do Simulado -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between text-xs text-slate-500 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+            <span id="sim-q-materia" class="font-bold text-slate-700 dark:text-slate-300"></span>
+            <span id="sim-q-info" class="text-slate-400"></span>
+          </div>
+
+          <div id="sim-q-enunciado" class="text-slate-800 dark:text-slate-100 text-base leading-relaxed mb-6 whitespace-pre-line"></div>
+          <div id="sim-q-alternativas" class="space-y-3"></div>
+
+          <div class="flex items-center justify-between mt-8 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <button onclick="simuladoAnterior()" id="btn-sim-ant" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-bold">
+              Anterior
+            </button>
+            <div id="sim-indicadores-navegacao" class="flex gap-1.5 overflow-x-auto max-w-xs px-2 py-1"></div>
+            <button onclick="simuladoProxima()" id="btn-sim-prox" class="px-4 py-2 rounded-xl bg-brand-600 text-white text-xs font-bold">
+              Próxima
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Relatório de Resultado do Simulado (Oculto até finalizar) -->
+      <div id="resultado-simulado" class="hidden max-w-4xl mx-auto flex flex-col gap-6">
+        <!-- Renderizado dinamicamente com notas, gráficos e revisão -->
+      </div>
+
+    </section>
+
+    <!-- ================= VIEW 3: EDITAL VERTICALIZADO ================= -->
+    <section id="view-edital" class="view-panel hidden">
+      
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="check-square" class="w-6 h-6 text-brand-600 dark:text-indigo-400"></i> Editais Verticalizados
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Acompanhe seu avanço em cada disciplina do edital com metodologia de ciclo de estudos.</p>
+          </div>
+
+          <!-- Seletor do Edital -->
+          <div class="w-full sm:w-auto">
+            <select id="seletor-edital" onchange="carregarEditalSelecionado()" class="w-full sm:w-72 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-bold">
+              <!-- Preenchido via API -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Barra de Progresso Global do Edital Ativo -->
+        <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+          <div class="flex items-center justify-between text-xs font-bold mb-2">
+            <span class="text-slate-700 dark:text-slate-300">Progresso Geral do Edital</span>
+            <span id="edital-porcentagem-topo" class="text-brand-600 dark:text-indigo-400 text-sm">0%</span>
+          </div>
+          <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+            <div id="edital-barra-topo" class="bg-gradient-to-r from-brand-600 to-emerald-500 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+          </div>
+          <div class="flex items-center justify-between text-[11px] text-slate-400 mt-1">
+            <span id="edital-topicos-concluidos-txt">0 de 0 tópicos concluídos</span>
+            <span>Meta: 100% de cobertura pré-prova</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista / Árvore de Disciplinas e Tópicos -->
+      <div id="conteudo-edital-arvore" class="space-y-4">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+
+    </section>
+
+    <!-- ================= VIEW 4: CADERNO DE ERROS ================= -->
+    <section id="view-caderno" class="view-panel hidden">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-600 flex items-center justify-center">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-black text-slate-900 dark:text-white">Caderno de Erros Inteligente</h2>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Repetição espaçada direcionada para os pontos em que você costuma escorregar.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="iniciarTreinoCadernoErros()" class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs flex items-center gap-2 shadow-sm transition-all">
+              <i data-lucide="play" class="w-4 h-4 fill-current"></i> Resolver Todas as Erradas
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista de Questões do Caderno de Erros -->
+      <div id="lista-caderno-erros" class="space-y-4">
+        <!-- Renderizado via JS -->
+      </div>
+    </section>
+
+    <!-- ================= VIEW 5: ESTATÍSTICAS ================= -->
+    <section id="view-estatisticas" class="view-panel hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Total Respondidas</p>
+            <h3 id="stat-total" class="text-2xl font-black text-slate-900 dark:text-white mt-1">0</h3>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-brand-50 dark:bg-indigo-950/60 text-brand-600 flex items-center justify-center">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Taxa de Acerto Geral</p>
+            <h3 id="stat-taxa" class="text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-1">0%</h3>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">No Caderno de Erros</p>
+            <h3 id="stat-erros" class="text-2xl font-black text-rose-600 dark:text-rose-400 mt-1">0</h3>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-600 flex items-center justify-center">
+            <i data-lucide="alert-circle" class="w-5 h-5"></i>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Simulados Feitos</p>
+            <h3 id="stat-simulados" class="text-2xl font-black text-indigo-600 dark:text-indigo-400 mt-1">0</h3>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 flex items-center justify-center">
+            <i data-lucide="timer" class="w-5 h-5"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Desempenho por Matéria & por Banca -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="font-bold text-base text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+            <i data-lucide="book" class="w-4 h-4 text-brand-600"></i> Aproveitamento por Disciplina
+          </h3>
+          <div id="stats-lista-materias" class="space-y-3.5">
+            <!-- Renderizado via JS -->
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="font-bold text-base text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+            <i data-lucide="building" class="w-4 h-4 text-brand-600"></i> Aproveitamento por Banca
+          </h3>
+          <div id="stats-lista-bancas" class="space-y-3.5">
+            <!-- Renderizado via JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MODAL DO TUTOR IA ================= -->
+  <div id="modal-tutor-ia" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-xl w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col gap-4 max-h-[90vh] overflow-y-auto">
+      
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 text-white flex items-center justify-center shadow-md">
+            <i data-lucide="bot" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-slate-900 dark:text-white text-base">Tutor Concurseiro IA</h3>
+            <p class="text-xs text-slate-400">Mentor pedagógico 24 horas</p>
+          </div>
+        </div>
+        <button onclick="fecharTutorIA()" class="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Opções Rápidas de Ajuda -->
+      <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
+        <button onclick="solicitarAjudaTutor('macete')" class="p-3 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-950/40 text-brand-700 dark:text-indigo-300 hover:bg-indigo-100 flex items-center gap-2 transition-colors">
+          💡 Me dê um Macete / Mnemônico
+        </button>
+        <button onclick="solicitarAjudaTutor('simplificar')" class="p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 flex items-center gap-2 transition-colors">
+          🧒 Explique de forma Ultra Simples
+        </button>
+      </div>
+
+      <!-- Caixa de Pergunta Personalizada -->
+      <div class="flex gap-2">
+        <input type="text" id="tutor-pergunta-input" placeholder="Faça uma pergunta específica sobre esta questão..." 
+               class="flex-1 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+               onkeydown="if(event.key === 'Enter') solicitarAjudaTutor('duvida')">
+        <button onclick="solicitarAjudaTutor('duvida')" class="px-4 py-2.5 rounded-xl bg-brand-600 text-white font-bold text-xs hover:bg-brand-700 transition-colors">
+          Perguntar
+        </button>
+      </div>
+
+      <!-- Resposta do Tutor -->
+      <div id="tutor-resposta-box" class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 text-xs sm:text-sm leading-relaxed text-slate-800 dark:text-slate-200 min-h-[120px] whitespace-pre-line">
+        Olá! Como posso te ajudar a gabaritar essa questão? Escolha um dos botões acima ou digite sua dúvida exata!
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MODAL DE CRIAR QUESTÃO ================= -->
+  <div id="modal-criar-questao" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col gap-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+        <h3 class="font-extrabold text-slate-900 dark:text-white text-lg flex items-center gap-2">
+          <i data-lucide="plus-circle" class="w-5 h-5 text-brand-600"></i> Cadastrar Nova Questão
+        </h3>
+        <button onclick="fecharModalCriarQuestao()" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="form-criar-questao" onsubmit="salvarNovaQuestao(event)" class="space-y-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold mb-1">Disciplina</label>
+            <input type="text" id="novo-materia" required placeholder="Ex: Direito Constitucional" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Assunto</label>
+            <input type="text" id="novo-assunto" required placeholder="Ex: Direitos Sociais" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Banca</label>
+            <input type="text" id="novo-banca" required placeholder="Ex: Cesgranrio, FGV" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Enunciado da Questão</label>
+          <textarea id="novo-enunciado" required rows="3" placeholder="Digite o texto da questão..." class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs sm:text-sm"></textarea>
+        </div>
+
+        <div class="space-y-2">
+          <label class="block font-semibold">Alternativas</label>
+          <div class="flex items-center gap-2">
+            <span class="font-bold w-4">A)</span>
+            <input type="text" id="novo-alt-a" required placeholder="Alternativa A" class="flex-1 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold w-4">B)</span>
+            <input type="text" id="novo-alt-b" required placeholder="Alternativa B" class="flex-1 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold w-4">C)</span>
+            <input type="text" id="novo-alt-c" placeholder="Alternativa C" class="flex-1 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold w-4">D)</span>
+            <input type="text" id="novo-alt-d" placeholder="Alternativa D" class="flex-1 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold w-4">E)</span>
+            <input type="text" id="novo-alt-e" placeholder="Alternativa E" class="flex-1 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold mb-1">Gabarito Correto</label>
+            <select id="novo-gabarito" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 font-bold">
+              <option value="A">Letra A</option>
+              <option value="B">Letra B</option>
+              <option value="C">Letra C</option>
+              <option value="D">Letra D</option>
+              <option value="E">Letra E</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Artigo de Lei / Súmula</label>
+            <input type="text" id="novo-artigo" placeholder="Ex: CF/88 Art. 5º ou Súmula Vinculante 13" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Comentário Pedagógico Resumido</label>
+          <textarea id="novo-comentario" required rows="2" placeholder="Explique por que o gabarito está certo e onde o aluno costuma escorregar..." class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800"></textarea>
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-end gap-2">
+          <button type="button" onclick="fecharModalCriarQuestao()" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 font-bold">Cancelar</button>
+          <button type="submit" class="px-6 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold">Salvar Questão</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= BARRA DE NAVEGAÇÃO INFERIOR MOBILE ================= -->
+  <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 flex items-center justify-around py-2 px-1 text-[11px] font-semibold text-slate-600 dark:text-slate-400 shadow-lg">
+    <button onclick="navegarPara('questoes')" class="mobile-nav-btn flex flex-col items-center gap-1 active text-brand-600 dark:text-indigo-400">
+      <i data-lucide="help-circle" class="w-5 h-5"></i>
+      <span>Questões</span>
+    </button>
+    <button onclick="navegarPara('simulados')" class="mobile-nav-btn flex flex-col items-center gap-1">
+      <i data-lucide="timer" class="w-5 h-5"></i>
+      <span>Simulado</span>
+    </button>
+    <button onclick="navegarPara('edital')" class="mobile-nav-btn flex flex-col items-center gap-1">
+      <i data-lucide="list-checks" class="w-5 h-5"></i>
+      <span>Edital</span>
+    </button>
+    <button onclick="navegarPara('caderno')" class="mobile-nav-btn flex flex-col items-center gap-1">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      <span>Erros</span>
+    </button>
+    <button onclick="navegarPara('estatisticas')" class="mobile-nav-btn flex flex-col items-center gap-1">
+      <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+      <span>Stats</span>
+    </button>
+  </nav>
+
+  <!-- Script da Aplicação -->
+  <script src="storage-adapter.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Inicializar ícones do Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>
