@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initTrialSystem();
   initKeyboardShortcuts();
+  carregarContadorVisitas();
   carregarFiltrosDropdown();
   carregarQuestoes();
   carregarEstatisticas();
@@ -1380,4 +1381,23 @@ function copiarFeedbackTexto() {
   } else {
     prompt('Copie o texto abaixo para enviar:', texto);
   }
+}
+
+// ================= CONTADOR DE VISITAS =================
+async function carregarContadorVisitas() {
+  const el = document.getElementById('contador-visitas-num');
+  if (!el) return;
+  try {
+    const res = await fetch('/api/visitas');
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.total_visitas) {
+        el.textContent = Number(data.total_visitas).toLocaleString('pt-BR');
+        return;
+      }
+    }
+  } catch (e) {}
+
+  let local = parseInt(localStorage.getItem('aprovaquest_visitas_total') || '1', 10);
+  el.textContent = local.toLocaleString('pt-BR');
 }

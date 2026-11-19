@@ -200,6 +200,17 @@ class AppConcursosHandler(BaseHTTPRequestHandler):
         questoes = load_json(QUESTOES_FILE, [])
         user_data = get_user_data()
 
+        if path == '/api/visitas':
+            analytics_file = os.path.join(DATA_DIR, "analytics.json")
+            data = load_json(analytics_file, {"total_visitas": 0, "ultimos_acessos": []})
+            data["total_visitas"] = data.get("total_visitas", 0) + 1
+            from datetime import datetime
+            data["ultimos_acessos"].append(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            data["ultimos_acessos"] = data["ultimos_acessos"][-100:]
+            save_json(analytics_file, data)
+            self.send_json({"total_visitas": data["total_visitas"]})
+            return
+
         if path == '/api/filtros':
             bancas = sorted(list(set(q.get('banca') for q in questoes if q.get('banca'))))
             materias = sorted(list(set(q.get('materia') for q in questoes if q.get('materia'))))
