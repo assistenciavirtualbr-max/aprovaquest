@@ -1401,3 +1401,58 @@ async function carregarContadorVisitas() {
   let local = parseInt(localStorage.getItem('aprovaquest_visitas_total') || '1', 10);
   el.textContent = local.toLocaleString('pt-BR');
 }
+
+// ================= BACKUP & SINCRONIZAÇÃO =================
+async function exportarBackupAluno() {
+  try {
+    let dados = {
+      respostas: {},
+      caderno_erros: [],
+      favoritas: [],
+      simulados_feitos: [],
+      edital_progresso: {},
+      metas: { diaria: 20, hoje_respondidas: 0 }
+    };
+
+    const rawLocal = localStorage.getItem('aprovaquest_user_data_v1');
+    if (rawLocal) {
+      dados = JSON.parse(rawLocal);
+    }
+    dados.exportado_em = new Date().toISOString();
+    dados.versao = "1.2";
+
+    const blob = new Blob([JSON.stringify(dados, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `aprovaquest_backup_${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    alert('✅ Backup baixado com sucesso! Guarde este arquivo para restaurar em qualquer aparelho.');
+  } catch (err) {
+    alert('Erro ao gerar arquivo de backup: ' + err.message);
+  }
+}
+
+function importarBackupAluno(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      if (!parsed || (!parsed.respostas && !parsed.caderno_erros)) {
+        throw new Error('Arquivo de backup inválido ou incompatível.');
+      }
+      localStorage.setItem('aprovaquest_user_data_v1', JSON.stringify(parsed));
+      alert('🎉 Dados restaurados com sucesso! O aplicativo será recarregado.');
+      window.location.reload();
+    } catch (err) {
+      alert('❌ Erro ao restaurar arquivo: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
