@@ -164,16 +164,23 @@ class AppConcursosHandler(BaseHTTPRequestHandler):
 
         # Sanitizar caminho
         rel_path = path.lstrip('/')
-        filepath = os.path.abspath(os.path.join(PUBLIC_DIR, rel_path))
+        
+        # Verificar no BASE_DIR primeiro, depois no PUBLIC_DIR
+        filepath = os.path.abspath(os.path.join(BASE_DIR, rel_path))
+        if not os.path.exists(filepath) or os.path.isdir(filepath):
+            filepath = os.path.abspath(os.path.join(PUBLIC_DIR, rel_path))
 
         # Bloquear path traversal
-        if not filepath.startswith(os.path.abspath(PUBLIC_DIR)):
+        base_valid = filepath.startswith(os.path.abspath(BASE_DIR)) or filepath.startswith(os.path.abspath(PUBLIC_DIR))
+        if not base_valid:
             self.send_error(403, "Acesso proibido")
             return
 
         if not os.path.exists(filepath) or os.path.isdir(filepath):
             # Tentar fallback para index.html se for rota SPA
-            fallback = os.path.join(PUBLIC_DIR, 'index.html')
+            fallback = os.path.join(BASE_DIR, 'index.html')
+            if not os.path.exists(fallback):
+                fallback = os.path.join(PUBLIC_DIR, 'index.html')
             if os.path.exists(fallback):
                 filepath = fallback
             else:
@@ -181,7 +188,11 @@ class AppConcursosHandler(BaseHTTPRequestHandler):
                 return
 
         mime_type, _ = mimetypes.guess_type(filepath)
-        if mime_type is None:
+        if filepath.endswith('.json') or filepath.endswith('manifest.json'):
+            mime_type = 'application/manifest+json'
+        elif filepath.endswith('.js'):
+            mime_type = 'application/javascript'
+        elif mime_type is None:
             mime_type = 'application/octet-stream'
 
         try:

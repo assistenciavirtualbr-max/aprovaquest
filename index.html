@@ -48,6 +48,17 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- PWA Meta Tags & Mobile App Support -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AprovaQuest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon.png">
+
   <!-- Estilos Customizados e Animações -->
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,6 +130,20 @@
         <button onclick="compartilharApp()" title="Compartilhar com Grupo de Concurseiros" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500 hover:bg-emerald-600 text-white shadow-sm transition-all">
           <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
           <span>Compartilhar</span>
+        </button>
+
+        <!-- Botão Instalar App no Celular (PWA) -->
+        <button id="btn-instalar-app" onclick="acionarInstalacaoPWA()" title="Instalar AprovaQuest no seu Celular" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-sm transition-all hover:scale-105 active:scale-95">
+          <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Instalar no Celular</span>
+          <span class="sm:hidden">Instalar</span>
+        </button>
+
+        <!-- Botão Adquirir VIP / Seja Pro -->
+        <button id="btn-adquirir-vip" onclick="abrirModalCompraVIP()" title="Garantir Acesso Vitalício Ilimitado" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-sm transition-all hover:scale-105 active:scale-95">
+          <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-100"></i>
+          <span class="hidden sm:inline">Acesso Vitalício</span>
+          <span class="sm:hidden">VIP</span>
         </button>
 
         <!-- Selo de Período de Testes (5 Dias) -->
@@ -853,6 +878,156 @@
       <span>Stats</span>
     </button>
   </nav>
+
+  <!-- ================= BANNER FLUTUANTE DE INSTALAÇÃO MOBILE ================= -->
+  <div id="banner-instalar-mobile" class="hidden fixed bottom-20 left-3 right-3 z-40 bg-gradient-to-r from-brand-900 to-indigo-950 text-white p-3.5 rounded-2xl shadow-2xl border border-indigo-500/30 flex items-center justify-between gap-3 animate-bounce">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white shrink-0 shadow-md">
+        <i data-lucide="smartphone" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <p class="text-xs font-bold leading-tight">Instale o AprovaQuest</p>
+        <p class="text-[11px] text-indigo-200">Acesse em 1 clique mesmo offline no celular!</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-1.5 shrink-0">
+      <button onclick="acionarInstalacaoPWA()" class="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs shadow-md transition-all">
+        Instalar
+      </button>
+      <button onclick="document.getElementById('banner-instalar-mobile').classList.add('hidden')" class="p-1.5 text-slate-400 hover:text-white rounded-lg">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MODAL COMERCIAL: COMPRA DO ACESSO VIP VITALÍCIO ================= -->
+  <div id="modal-compra-vip" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl text-center space-y-5 animate-in fade-in zoom-in duration-200 my-auto">
+      
+      <div class="flex items-center justify-between">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i>
+          Oferta Especial de Lançamento
+        </span>
+        <button onclick="fecharModalCompraVIP()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-indigo-600 text-white flex items-center justify-center mx-auto shadow-xl shadow-amber-500/25">
+        <i data-lucide="crown" class="w-8 h-8 text-amber-200"></i>
+      </div>
+
+      <div>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+          Acesso VIP Vitalício
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Estude com o método ativo que mais aprova em concursos públicos.
+        </p>
+      </div>
+
+      <!-- Preço Promocional -->
+      <div class="bg-gradient-to-br from-brand-50 to-indigo-50 dark:from-slate-800 dark:to-indigo-950/50 p-4 rounded-2xl border border-brand-200 dark:border-indigo-900/60">
+        <div class="flex items-center justify-center gap-2 text-slate-400 line-through text-sm">
+          <span>De R$ 97,00</span>
+        </div>
+        <div class="flex items-center justify-center gap-1 mt-1">
+          <span class="text-xs font-bold text-slate-500 uppercase">Por apenas</span>
+          <span class="text-3xl sm:text-4xl font-black text-emerald-600 dark:text-emerald-400">R$ 29,90</span>
+          <span class="text-xs font-semibold text-slate-500">à vista</span>
+        </div>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Pagamento Único • Sem Mensalidades • Acesso Vitalício Imediato</p>
+      </div>
+
+      <!-- Benefícios Inclusos -->
+      <div class="text-left space-y-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+          <span><strong>Banco com 137+ Questões</strong> com análise didática alternativa por alternativa</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+          <span><strong>Simulados Cronometrados Ilimitados</strong> com nota de corte e ranking</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+          <span><strong>Caderno de Erros Inteligente</strong> para memorização espaçada</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+          <span><strong>Mentor Concurseiro com IA</strong> para macetes e mnemônicos rápidos</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+          <span><strong>Instalável no Celular (Android e iPhone)</strong> funcionando 100% offline</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="shield-check" class="w-4 h-4 text-brand-500 shrink-0"></i>
+          <span class="text-slate-500 dark:text-slate-400"><strong>Garantia de 7 Dias:</strong> Satisfação total ou seu dinheiro de volta</span>
+        </div>
+      </div>
+
+      <!-- Botão de Checkout / Compra Direta -->
+      <div class="space-y-2 pt-2">
+        <button id="btn-checkout-link" onclick="redirecionarCheckout()" class="w-full py-4 px-6 rounded-2xl font-black text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]">
+          <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+          <span>Garantir Meu Acesso Vitalício Agora</span>
+        </button>
+        <p class="text-[11px] text-slate-400 flex items-center justify-center gap-1">
+          <i data-lucide="lock" class="w-3 h-3"></i> Pagamento 100% Seguro via PIX ou Cartão
+        </p>
+      </div>
+
+      <!-- Já comprou? Digite sua Chave VIP -->
+      <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+        <p class="text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Já adquiriu seu acesso? Insira sua Chave VIP:</p>
+        <div class="flex items-center gap-2 max-w-sm mx-auto">
+          <input type="text" id="input-chave-vip-modal" placeholder="EX: VIP2026" class="flex-1 px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-center uppercase tracking-wider font-mono focus:ring-2 focus:ring-brand-500 outline-none">
+          <button onclick="validarChaveVIPModal()" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition-colors">
+            Ativar Acesso
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= MODAL INSTRUÇÕES DE INSTALAÇÃO NO IOS (IPHONE/IPAD) ================= -->
+  <div id="modal-instalar-ios" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-md w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl text-center space-y-5 animate-in fade-in zoom-in duration-200">
+      
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-500 text-white flex items-center justify-center mx-auto shadow-lg shadow-brand-500/20">
+        <i data-lucide="apple" class="w-8 h-8"></i>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Instalar no seu iPhone / iPad</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          Instale o AprovaQuest na tela inicial em 3 passos rápidos:
+        </p>
+      </div>
+
+      <div class="text-left space-y-3 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+        <div class="flex items-center gap-3">
+          <span class="w-6 h-6 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+          <span>No Safari, toque no botão <strong>Compartilhar</strong> (ícone com quadrado e seta para cima 📤).</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-6 h-6 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+          <span>Role para baixo e toque em <strong>"Adicionar à Tela de Início"</strong> (ícone ➕).</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-6 h-6 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+          <span>Toque em <strong>"Adicionar"</strong> no canto superior direito.</span>
+        </div>
+      </div>
+
+      <button onclick="document.getElementById('modal-instalar-ios').classList.add('hidden')" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition-colors">
+        Entendi, vou instalar agora!
+      </button>
+    </div>
+  </div>
 
   <!-- Script da Aplicação -->
   <!-- ================= MODAL PERÍODO DE TESTE EXPIRADO (5 DIAS) ================= -->

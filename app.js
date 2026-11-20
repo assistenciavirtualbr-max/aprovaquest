@@ -1284,13 +1284,33 @@ function compartilharApp() {
   }
 }
 
-// ================= SISTEMA DE PERÍODO DE TESTE (5 DIAS) =================
+// ================= SISTEMA DE PERÍODO DE TESTE & MONETIZAÇÃO =================
 const TRIAL_CONFIG = {
   DIAS_TESTE: 5,
   CHAVE_STORAGE_INICIO: 'aprovaquest_trial_start_v1',
   CHAVE_STORAGE_VIP: 'aprovaquest_vip_unlocked_v1',
-  CHAVES_VALIDAS: ['VIP2026', 'APROVA2026', 'ADMIN2026', 'CONCURSEIRO2026']
+  CHECKOUT_URL: 'https://wa.me/?text=Ol%C3%A1!%20Quero%20garantir%20meu%20Acesso%20VIP%20Vital%C3%ADcio%20ao%20AprovaQuest%20por%20R$%2029,90!',
+  CHAVES_VALIDAS: [
+    'VIP2026',
+    'APROVA2026',
+    'ADMIN2026',
+    'CONCURSEIRO2026',
+    'DIOPRO2026',
+    'VITALICIO2026',
+    'CONCURSO2026'
+  ]
 };
+
+function verificarChaveValida(chave) {
+  if (!chave) return false;
+  const c = chave.trim().toUpperCase();
+  if (TRIAL_CONFIG.CHAVES_VALIDAS.includes(c)) return true;
+  // Permite qualquer chave customizada no formato APROVA-XXXX
+  if (c.startsWith('APROVA-') && c.length >= 9) return true;
+  // Permite chave gerada por e-mail ou prefixo VIP-
+  if (c.startsWith('VIP-') && c.length >= 7) return true;
+  return false;
+}
 
 function initTrialSystem() {
   const badge = document.getElementById('badge-trial');
@@ -1353,16 +1373,54 @@ function validarChaveVIP() {
   const input = document.getElementById('input-chave-vip');
   const chave = (input ? input.value : '').trim().toUpperCase();
 
-  if (TRIAL_CONFIG.CHAVES_VALIDAS.includes(chave)) {
+  if (verificarChaveValida(chave)) {
     localStorage.setItem(TRIAL_CONFIG.CHAVE_STORAGE_VIP, 'true');
-    alert('🎉 Parabéns! Sua Chave VIP foi validada com sucesso. O seu acesso ao AprovaQuest agora é ILIMITADO!');
+    alert('🎉 Parabéns! Sua Chave VIP foi validada com sucesso. O seu acesso ao AprovaQuest agora é ILIMITADO e VITALÍCIO!');
     const modal = document.getElementById('modal-trial-expirado');
     if (modal) modal.classList.add('hidden');
     document.body.style.overflow = '';
     window.location.reload();
   } else {
-    alert('❌ Chave VIP não reconhecida. Envie uma mensagem no WhatsApp do desenvolvedor para receber seu acesso.');
+    alert('❌ Chave VIP não reconhecida. Envie uma mensagem no WhatsApp do desenvolvedor para receber seu acesso ou use uma chave válida.');
   }
+}
+
+// ================= MODAL COMERCIAL & CHECKOUT =================
+function abrirModalCompraVIP() {
+  const modal = document.getElementById('modal-compra-vip');
+  if (modal) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    if (window.lucide) lucide.createIcons();
+  }
+}
+
+function fecharModalCompraVIP() {
+  const modal = document.getElementById('modal-compra-vip');
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+}
+
+function validarChaveVIPModal() {
+  const input = document.getElementById('input-chave-vip-modal');
+  const chave = (input ? input.value : '').trim().toUpperCase();
+
+  if (verificarChaveValida(chave)) {
+    localStorage.setItem(TRIAL_CONFIG.CHAVE_STORAGE_VIP, 'true');
+    alert('🎉 Parabéns! Chave VIP ativada com sucesso! Você agora é um membro VIP Vitalício do AprovaQuest.');
+    fecharModalCompraVIP();
+    window.location.reload();
+  } else {
+    alert('❌ Chave VIP inválida. Verifique o código recebido na confirmação de compra ou chame o suporte no WhatsApp.');
+  }
+}
+
+function redirecionarCheckout() {
+  // Caso o usuário queira abrir o WhatsApp ou link da Kiwify/Hotmart
+  const urlConfigurada = localStorage.getItem('aprovaquest_custom_checkout_url') || TRIAL_CONFIG.CHECKOUT_URL;
+  window.open(urlConfigurada, '_blank');
 }
 
 function abrirWhatsAppFeedback() {
@@ -1455,4 +1513,81 @@ function importarBackupAluno(event) {
     }
   };
   reader.readAsText(file);
+}
+
+// ================= PWA: INSTALAÇÃO NO CELULAR & SERVICE WORKER =================
+let deferredInstallPrompt = null;
+
+// Capturar evento de instalação nativo (Android / Chrome / Edge)
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  
+  const btnHeader = document.getElementById('btn-instalar-app');
+  if (btnHeader) btnHeader.classList.remove('hidden');
+
+  const bannerMobile = document.getElementById('banner-instalar-mobile');
+  if (bannerMobile && !window.matchMedia('(display-mode: standalone)').matches) {
+    bannerMobile.classList.remove('hidden');
+    if (window.lucide) lucide.createIcons();
+  }
+});
+
+// Ação de clique no botão "Instalar no Celular"
+function acionarInstalacaoPWA() {
+  // 1. Verificar se já está rodando como aplicativo instalado
+  if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+    alert('📱 O AprovaQuest já está instalado e funcionando como aplicativo no seu dispositivo!');
+    return;
+  }
+
+  // 2. Se for Android/Desktop com suporte ao prompt nativo
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('✅ Usuário aceitou instalar o AprovaQuest como App');
+        const banner = document.getElementById('banner-instalar-mobile');
+        if (banner) banner.classList.add('hidden');
+      }
+      deferredInstallPrompt = null;
+    });
+    return;
+  }
+
+  // 3. Se for iOS (iPhone/iPad/Safari)
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (isIOS) {
+    const modalIOS = document.getElementById('modal-instalar-ios');
+    if (modalIOS) {
+      modalIOS.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+    return;
+  }
+
+  // 4. Outros navegadores (ex: Chrome no Desktop ou browser sem prompt ativo)
+  alert('💡 Para instalar:\n1. Clique no menu de três pontinhos do seu navegador (⋮).\n2. Selecione "Instalar aplicativo" ou "Adicionar à tela inicial".');
+}
+
+// Esconder botões de instalação se já estiver rodando instalado
+window.addEventListener('appinstalled', () => {
+  console.log('🎉 AprovaQuest instalado com sucesso!');
+  const banner = document.getElementById('banner-instalar-mobile');
+  if (banner) banner.classList.add('hidden');
+  const btn = document.getElementById('btn-instalar-app');
+  if (btn) btn.classList.add('hidden');
+});
+
+// Registrar Service Worker para Cache Offline & PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => {
+        console.log('✅ ServiceWorker AprovaQuest registrado com sucesso:', reg.scope);
+      })
+      .catch((err) => {
+        console.warn('⚠️ ServiceWorker AprovaQuest:', err);
+      });
+  });
 }

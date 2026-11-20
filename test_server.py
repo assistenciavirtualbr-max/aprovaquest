@@ -6,11 +6,14 @@ import sys
 import os
 
 print("[*] Iniciando teste automatizado do servidor AprovaQuest...")
+script_dir = os.path.abspath(os.path.dirname(__file__))
+server_file = "server.py" if os.path.exists(os.path.join(script_dir, "server.py")) else "app-concursos/server.py"
+
 server_process = subprocess.Popen(
-    [sys.executable, "app-concursos/server.py", "8008"],
+    [sys.executable, server_file, "8008"],
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
-    cwd=os.path.abspath(os.path.dirname(__file__))
+    cwd=script_dir
 )
 
 time.sleep(1.5)

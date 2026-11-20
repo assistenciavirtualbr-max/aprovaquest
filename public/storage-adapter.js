@@ -75,6 +75,14 @@
     const questoes = await carregarBancoLocal();
     const userData = getLocalUserData();
 
+    // ================= GET /api/visitas =================
+    if (path === '/api/visitas' && method === 'GET') {
+      let visitas = parseInt(localStorage.getItem('aprovaquest_visitas_total') || '0', 10);
+      visitas += 1;
+      localStorage.setItem('aprovaquest_visitas_total', visitas.toString());
+      return jsonResponse({ total_visitas: visitas });
+    }
+
     // ================= GET /api/filtros =================
     if (path === '/api/filtros' && method === 'GET') {
       const bancas = [...new Set(questoes.map(q => q.banca).filter(Boolean))].sort();

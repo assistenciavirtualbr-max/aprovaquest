@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AprovaQuest - O Método Definitivo de Questões para Concursos no Celular</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#4f46e5',
+              600: '#4338ca',
+              700: '#3730a3',
+              800: '#312e81',
+              900: '#1e1b4b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(79, 70, 229, 0.25), transparent 70%),
+                  radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.15), transparent 50%);
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Faixa de Urgência Topo -->
+  <div class="bg-gradient-to-r from-brand-700 via-indigo-600 to-emerald-600 text-white text-[11px] sm:text-xs font-black py-2 px-4 text-center tracking-wider uppercase flex items-center justify-center space-x-2">
+    <span>🔥 OFERTA DE LANÇAMENTO &bull; ACESSO VITALÍCIO COM 70% DE DESCONTO &bull; SEM MENSALIDADES</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      
+      <div class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/25">
+          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+        </div>
+        <span class="font-black text-xl tracking-tight text-white">Aprova<span class="text-indigo-400">Quest</span></span>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-6 text-sm text-slate-400 font-medium">
+        <a href="#como-funciona" class="hover:text-white transition">Como Funciona</a>
+        <a href="#recursos" class="hover:text-white transition">Recursos</a>
+        <a href="#comparativo" class="hover:text-white transition">Comparativo</a>
+        <a href="#faq" class="hover:text-white transition">Dúvidas</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="hidden sm:inline-flex text-xs font-semibold text-slate-300 hover:text-white px-3 py-2">
+          Testar Grátis
+        </a>
+        <a href="#preco" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white text-xs md:text-sm font-extrabold shadow-lg shadow-emerald-500/25 transition transform hover:-translate-y-0.5">
+          Garantir Acesso VIP
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-glow pt-16 pb-20 px-4 text-center relative overflow-hidden">
+    <div class="max-w-4xl mx-auto space-y-6">
+      
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900 border border-indigo-500/40 text-xs text-indigo-300 font-bold shadow-sm">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
+        <span>O Método de Estudo Ativo que Transforma Questões em Aprovações</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight sm:leading-none">
+        Passe no Concurso dos Seus Sonhos <br class="hidden sm:inline">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-brand-400 to-emerald-400">
+          Estudando Direto no Celular
+        </span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Chega de PDFs de 300 páginas e vídeo-aulas sonolentas. Domine a <strong>Lei Seca</strong>, <strong>Súmulas</strong> e <strong>Pegadinhas de Bancas</strong> (Cesgranrio, FGV, Cebraspe, FCC) com comentários pedagógicos completos alternativa por alternativa.
+      </p>
+
+      <!-- Botões de Ação Hero -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="#preco" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white text-base font-extrabold shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5">
+          <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+          <span>QUERO MEU ACESSO VITALÍCIO &bull; R$ 29,90</span>
+        </a>
+        <a href="index.html" class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-900 border border-slate-700 hover:bg-slate-800 text-slate-200 text-sm font-bold flex items-center justify-center gap-2 transition">
+          <i data-lucide="play-circle" class="w-5 h-5 text-indigo-400"></i>
+          <span>Testar Aplicativo Agora</span>
+        </a>
+      </div>
+
+      <!-- Prova Rápida / Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-6 pt-6 text-xs text-slate-400">
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>Instala no Android e iPhone</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>Funciona 100% Offline</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>Sem Anúncios / Sem Mensalidades</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+          <span>Garantia Incondicional de 7 Dias</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= COMO FUNCIONA / OS 4 PILARES ================= -->
+  <section id="como-funciona" class="py-20 px-4 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Metodologia Comprovada</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Os 4 Pilares da Aprovação Rápida</h2>
+        <p class="text-slate-400 text-sm sm:text-base">Por que os concurseiros que estudam com o AprovaQuest passam até 3x mais rápido?</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pilar 1 -->
+        <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+            <i data-lucide="file-check-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Análise Alternativa por Alternativa</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Não basta saber o gabarito. O AprovaQuest explica com detalhes <strong>por que cada distrator está errado</strong> e qual artigo invalida a alternativa.
+          </p>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
+            <i data-lucide="scale" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Filtro Exclusivo de Lei Seca & Súmulas</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Mais de 80% das questões de concurso exigem a literalidade da lei. Treine focado nos artigos e súmulas do STF e STJ que mais despencam em prova.
+          </p>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center">
+            <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Radar de Pegadinhas da Banca</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Aprenda a identificar na hora os truques clássicos da Cesgranrio, FGV, Cebraspe e FCC: palavras excludentes, inversão de competências e exceções camufladas.
+          </p>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition duration-300 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Caderno de Erros Inteligente</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Cada questão errada é catalogada automaticamente para você revisar pelo método de repetição espaçada até zerar todas as suas dúvidas.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= O APLICATIVO NO SEU CELULAR ================= -->
+  <section id="recursos" class="py-20 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      
+      <!-- Visual Card / Celular -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <div class="relative w-72 sm:w-80 rounded-[2.5rem] bg-slate-900 p-4 border-4 border-slate-800 shadow-2xl shadow-brand-500/20">
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 h-5 w-32 bg-slate-800 rounded-b-xl"></div>
+          
+          <div class="bg-slate-950 rounded-[2rem] p-5 text-left space-y-4 border border-slate-800">
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-xs font-extrabold text-indigo-400">AprovaQuest Pro</span>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-bold">100% Offline</span>
+            </div>
+            
+            <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 text-xs">
+              <span class="text-[10px] text-amber-400 font-bold uppercase">Questão #1 &bull; Cesgranrio</span>
+              <p class="text-slate-300 mt-1 font-medium">De acordo com a Lei 4.595/64, compete privativamente ao CMN:</p>
+            </div>
+
+            <div class="space-y-1.5 text-[11px]">
+              <div class="p-2 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-bold flex items-center justify-between">
+                <span>B) Fixar diretrizes cambiais...</span>
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900 text-slate-400">A) Emitir papel-moeda</div>
+              <div class="p-2 rounded-lg bg-slate-900 text-slate-400">C) Realizar operações de redesconto</div>
+            </div>
+
+            <div class="p-3 bg-indigo-950/60 rounded-xl border border-indigo-900/60 text-[10px] text-indigo-200">
+              💡 <strong>Tutor Concurseiro:</strong> "Lembre-se: o CMN é normativo (dita as regras). Quem executa é o Banco Central!"
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo Lateral -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Praticidade Máxima</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white leading-tight">
+          Estude no Metrô, Ônibus ou no Intervalo do Trabalho
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          O AprovaQuest é desenvolvido com tecnologia de ponta <strong>PWA (Progressive Web App)</strong>. Com apenas 1 clique, você instala o aplicativo na tela inicial do seu celular (Android ou iPhone) sem ocupar a memória do aparelho.
+        </p>
+
+        <div class="space-y-3 text-sm text-slate-300">
+          <div class="flex items-start gap-3">
+            <div class="p-1 rounded-lg bg-emerald-500/20 text-emerald-400 mt-0.5">
+              <i data-lucide="check" class="w-4 h-4"></i>
+            </div>
+            <span><strong>Abertura Instantânea:</strong> Abre em tela cheia como qualquer aplicativo nativo da App Store ou Play Store.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="p-1 rounded-lg bg-emerald-500/20 text-emerald-400 mt-0.5">
+              <i data-lucide="check" class="w-4 h-4"></i>
+            </div>
+            <span><strong>Modo 100% Offline:</strong> Responda questões mesmo no modo avião ou quando acabar sua franquia de dados móveis.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="p-1 rounded-lg bg-emerald-500/20 text-emerald-400 mt-0.5">
+              <i data-lucide="check" class="w-4 h-4"></i>
+            </div>
+            <span><strong>Backup & Sincronização:</strong> Salve seus cadernos de erros e exporte para o tablet ou computador quando quiser.</span>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="#preco" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 underline underline-offset-4">
+            <span>Aproveite o preço de lançamento agora &rarr;</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TABELA COMPARATIVA ================= -->
+  <section id="comparativo" class="py-20 px-4 bg-slate-900/60 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-12 space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Compare e Veja Por Que Vale a Pena</h2>
+        <p class="text-slate-400 text-xs sm:text-sm">Economize centenas de reais e estude com objetividade.</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 text-slate-400">
+              <th class="py-4 px-4 font-bold">Funcionalidade</th>
+              <th class="py-4 px-4 font-bold text-indigo-400 bg-brand-950/40 rounded-t-xl text-center">AprovaQuest VIP</th>
+              <th class="py-4 px-4 font-bold text-slate-500 text-center">Plataformas Tradicionais</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60">
+            <tr>
+              <td class="py-3.5 px-4 font-medium text-slate-200">Tipo de Pagamento</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-400 bg-brand-950/40 text-center">ÚNICO (R$ 29,90 Vitalício)</td>
+              <td class="py-3.5 px-4 text-slate-400 text-center">Mensalidades (R$ 49/mês a R$ 900/ano)</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 font-medium text-slate-200">Anúncios e Banners</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-400 bg-brand-950/40 text-center">ZERO Anúncios</td>
+              <td class="py-3.5 px-4 text-slate-400 text-center">Cheio de propagandas e distrações</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 font-medium text-slate-200">Comentário Didático Completo</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-400 bg-brand-950/40 text-center">Alternativa por Alternativa + Lei Seca</td>
+              <td class="py-3.5 px-4 text-slate-400 text-center">Fórum confuso com comentários rasos</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 font-medium text-slate-200">Funciona Offline no Celular</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-400 bg-brand-950/40 text-center">SIM (Tecnologia PWA)</td>
+              <td class="py-3.5 px-4 text-rose-400 text-center">NÃO (Exige internet contínua)</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 font-medium text-slate-200">Mentor IA com Macetes</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-400 bg-brand-950/40 text-center">INCLUSO 24h</td>
+              <td class="py-3.5 px-4 text-slate-400 text-center">Cobrado à parte como plano VIP caro</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SEÇÃO DE PREÇO / CHECKOUT ================= -->
+  <section id="preco" class="py-20 px-4 relative">
+    <div class="max-w-xl mx-auto">
+      
+      <div class="bg-gradient-to-b from-slate-900 to-indigo-950 p-6 sm:p-10 rounded-3xl border-2 border-emerald-500/50 shadow-2xl shadow-emerald-500/10 text-center space-y-6 relative">
+        
+        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/30">
+            🔥 Acesso Imediato &bull; Vagas de Lançamento
+          </span>
+        </div>
+
+        <div class="pt-2">
+          <h3 class="text-2xl sm:text-3xl font-black text-white">Plano VIP Vitalício</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">Invista uma única vez na sua aprovação</p>
+        </div>
+
+        <!-- Bloco de Preço -->
+        <div class="p-6 bg-slate-950/80 rounded-2xl border border-slate-800 space-y-1">
+          <span class="text-sm text-slate-500 line-through">De R$ 97,00</span>
+          <div class="flex items-center justify-center gap-1">
+            <span class="text-sm font-bold text-slate-400 uppercase">Por Apenas</span>
+            <span class="text-4xl sm:text-5xl font-black text-emerald-400">R$ 29,90</span>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">Pagamento Único &bull; Sem Mensalidades &bull; Acesso para Sempre</p>
+        </div>
+
+        <!-- Lista de Bônus Inclusos -->
+        <div class="text-left space-y-2.5 text-xs sm:text-sm text-slate-200">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <span><strong>Acesso Vitalício Ilimitado</strong> a todas as questões</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <span><strong>Simulados Cronometrados</strong> com notas de corte</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <span><strong>Caderno de Erros Automatizado</strong></span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <span><strong>Mentor Concurseiro com IA</strong> para tirar dúvidas e macetes</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <span><strong>Editais Verticalizados</strong> (Caixa e INSS)</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <span><strong>Instalação no Celular</strong> (Android e iPhone)</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <span><strong>Novas Questões e Atualizações</strong> sem nenhum custo adicional</span>
+          </div>
+        </div>
+
+        <!-- Botão Principal de Compra -->
+        <div class="space-y-3 pt-2">
+          <a id="btn-comprar-landing" href="https://wa.me/?text=Ol%C3%A1!%20Quero%20adquirir%20o%20AprovaQuest%20VIP%20Vital%C3%ADcio%20por%20R$%2029,90" target="_blank" class="w-full py-4 px-6 rounded-2xl font-black text-base sm:text-lg bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-2 transition transform hover:scale-[1.02] active:scale-[0.98]">
+            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+            <span>GARANTIR MEU ACESSO AGORA</span>
+          </a>
+
+          <div class="flex items-center justify-center gap-4 text-[11px] text-slate-400">
+            <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Garantia de 7 Dias</span>
+            <span class="flex items-center gap-1"><i data-lucide="lock" class="w-3.5 h-3.5 text-indigo-400"></i> Pagamento Seguro</span>
+            <span class="flex items-center gap-1"><i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i> Liberação Imediata</span>
+          </div>
+        </div>
+
+        <!-- Garantia -->
+        <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 flex items-center gap-4 text-left">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <div class="text-xs text-slate-300">
+            <strong class="text-white block font-bold mb-0.5">Garantia Incondicional de 7 Dias</strong>
+            Teste o AprovaQuest por 7 dias. Se não ajudar na sua preparação, basta solicitar seu reembolso e devolvemos 100% do seu dinheiro. Sem perguntas.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PERGUNTAS FREQUENTES (FAQ) ================= -->
+  <section id="faq" class="py-20 px-4 bg-slate-900/40 border-t border-slate-800">
+    <div class="max-w-3xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Perguntas Frequentes</h2>
+        <p class="text-slate-400 text-xs sm:text-sm">Tudo o que você precisa saber antes de adquirir seu acesso.</p>
+      </div>
+
+      <div class="space-y-4 text-left">
+        
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <h4 class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-400"></i>
+            Como recebo meu acesso após o pagamento?
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Assim que a compra for confirmada, você recebe imediatamente o link do aplicativo junto com a sua <strong>Chave VIP de Ativação</strong>. Basta digitar a chave dentro do app e seu acesso vitalício será liberado na hora.
+          </p>
+        </div>
+
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <h4 class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-400"></i>
+            Funciona no iPhone e no Android?
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Sim! O AprovaQuest é 100% responsivo e pode ser instalado na tela de início de qualquer celular (iOS e Android), além de funcionar perfeitamente em notebooks, computadores e tablets.
+          </p>
+        </div>
+
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <h4 class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-400"></i>
+            Preciso pagar mensalidade?
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Não! Essa é uma oferta promocional de lançamento com <strong>pagamento único</strong>. Você paga uma única vez de R$ 29,90 e tem acesso ilimitado e vitalício para sempre.
+          </p>
+        </div>
+
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <h4 class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-400"></i>
+            Posso estudar sem internet?
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Sim! Graças à nossa arquitetura PWA com Service Worker e armazenamento local, após o primeiro acesso você pode resolver questões e revisar o caderno de erros mesmo sem sinal de internet ou no modo avião.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="py-10 border-t border-slate-900 bg-slate-950 text-center text-xs text-slate-500">
+    <div class="max-w-5xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <div class="w-7 h-7 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xs">
+          AQ
+        </div>
+        <span class="font-bold text-slate-300">AprovaQuest &bull; Plataforma de Estudos para Concursos</span>
+      </div>
+      <p>Todos os direitos reservados &copy; 2026. Feito com foco na aprovação de concurseiros de todo o Brasil.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

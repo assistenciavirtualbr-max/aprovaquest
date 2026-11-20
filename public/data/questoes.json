@@ -3641,5 +3641,1325 @@
       "pegadinha_da_banca": "A PRF é órgão OSTENSIVO (como a PM), mas é de natureza CIVIL e Federal."
     },
     "id": 100
+  },
+  {
+    "concurso": "Concurso Público Nacional Unificado (CPNU)",
+    "orgao": "MGI / Órgãos Federais",
+    "cargo": "Analista Técnico-Administrativo",
+    "ano": 2024,
+    "banca": "Cesgranrio",
+    "materia": "Direito Administrativo",
+    "assunto": "Nova Lei de Licitações - Modalidades e Inovações",
+    "nivel": "Superior",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Lei 14.133/2021, Art. 6º, XLII e Art. 28",
+    "sumula_ref": "",
+    "enunciado": "De acordo com a Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos), a modalidade de licitação voltada para a contratação de obras, serviços e compras em que a Administração Pública realiza diálogos com licitantes previamente selecionados mediante critérios objetivos, com o intuito de desenvolver uma ou mais alternativas capazes de atender às suas necessidades, denomina-se:",
+    "alternativas": {
+      "A": "Concurso especial.",
+      "B": "Tomada de preços simplificada.",
+      "C": "Diálogo competitivo.",
+      "D": "Pregão internacional.",
+      "E": "Consulta pública vinculante."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "O Diálogo Competitivo é a nova modalidade introduzida pela Lei 14.133/2021 para inovações tecnológicas ou complexidades técnicas onde o Estado dialoga antes da proposta final.",
+      "analise_alternativas": {
+        "A": "Incorreta. Concurso destina-se à escolha de trabalho técnico, científico ou artístico.",
+        "B": "Incorreta. Tomada de preços e Convite foram EXTINTOS na Lei 14.133/2021.",
+        "C": "CORRETA. Definição literal do Art. 6º, XLII da Lei 14.133/2021.",
+        "D": "Incorreta. O pregão destina-se a bens e serviços comuns.",
+        "E": "Incorreta. Consulta pública é procedimento auxiliar/participativo, não modalidade de licitação."
+      },
+      "fundamentacao_legal": "Art. 6º, XLII c/c Art. 28 da Lei 14.133/2021.",
+      "pegadinha_da_banca": "Lembre-se: 'Convite e Tomada de Preços NÃO existem na Nova Lei de Licitações; a grande novidade é o Diálogo Competitivo'."
+    },
+    "id": 101
+  },
+  {
+    "concurso": "Tribunal de Justiça de São Paulo",
+    "orgao": "TJ-SP",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2024,
+    "banca": "Vunesp",
+    "materia": "Direito Administrativo",
+    "assunto": "Improbidade Administrativa - Exigência de Dolo",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Lei 8.429/1992 (com redação dada pela Lei 14.230/2021), Art. 1º, §§ 1º e 2º",
+    "sumula_ref": "",
+    "enunciado": "A respeito dos atos de improbidade administrativa disciplinados pela Lei nº 8.429/1992, com as alterações profundas promovidas pela Lei nº 14.230/2021, é correto afirmar que:",
+    "alternativas": {
+      "A": "Configura ato de improbidade a conduta culposa grave devidamente comprovada em processo administrativo.",
+      "B": "Exige-se a demonstração de dolo específico para a configuração de qualquer ato de improbidade administrativa, sendo revogada a modalidade culposa.",
+      "C": "A divergência na interpretação de lei autoriza, por si só, a punição por improbidade do agente público causador do prejuízo.",
+      "D": "O mero exercício da função pública com negligência inescusável caracteriza dano ao erário com aplicação das sanções da lei.",
+      "E": "O prazo prescricional para ajuizamento da ação de improbidade é de cinco anos contados da cessação do mandato eletivo."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "A Reforma da Lei de Improbidade (Lei 14.230/2021) aboliu expressamente os atos de improbidade na forma CULPOSA (mesmo culpa grave). Hoje exige-se estritamente o DOLO.",
+      "analise_alternativas": {
+        "A": "Incorreta. Atos culposos deixaram de caracterizar improbidade.",
+        "B": "CORRETA. O Art. 1º, § 1º exige a vontade livre e consciente de alcançar o resultado ilícito (dolo).",
+        "C": "Incorreta. Art. 1º, § 8º: divergência interpretativa NÃO configura ato de improbidade.",
+        "D": "Incorreta. Negligência é culpa; logo, não configura improbidade.",
+        "E": "Incorreta. O novo prazo prescricional é de 8 (oito) anos, contados da ocorrência do fato (Art. 23)."
+      },
+      "fundamentacao_legal": "Art. 1º, §§ 1º, 2º e 8º c/c Art. 23 da Lei 8.429/1992 (redação da Lei 14.230/2021).",
+      "pegadinha_da_banca": "Atenção: 'NÃO existe mais improbidade culposa no ordenamento jurídico brasileiro. Todo ato de improbidade agora exige dolo'."
+    },
+    "id": 102
+  },
+  {
+    "concurso": "Tribunal Regional Federal",
+    "orgao": "TRF",
+    "cargo": "Técnico Judiciário",
+    "ano": 2024,
+    "banca": "Cebraspe",
+    "materia": "Direito Administrativo",
+    "assunto": "Poderes Administrativos - Poder de Polícia",
+    "nivel": "Médio",
+    "tipo": "certo_errado",
+    "eh_lei_seca": false,
+    "eh_sumula": true,
+    "dificuldade": "Médio",
+    "artigo_lei": "CTN, Art. 78; Jurisprudência do STF (Tema 532)",
+    "sumula_ref": "Tema 532 STF",
+    "enunciado": "Julgue o item a seguir com base no entendimento pacificado do Supremo Tribunal Federal (STF):\n\nÉ constitucional a delegação do poder de polícia, inclusive no que concerne à aplicação de sanções administrativas (multas), a pessoas jurídicas de direito privado integrantes da Administração Pública Indireta de capital social majoritariamente público que prestem exclusivamente serviço público de atuação própria do Estado e em regime não concorrencial.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "O STF fixou a tese de que estatais de capital majoritário público, prestadoras de serviços públicos não concorrenciais (ex: BHTrans), podem exercer e aplicar multas de poder de polícia.",
+      "analise_alternativas": {
+        "C": "CORRETA. Transcrição exata da tese de repercussão geral firmada pelo STF no Tema 532.",
+        "E": "Incorreta. O STF superou o antigo entendimento que vedava a fase sancionatória para estatais não concorrenciais."
+      },
+      "fundamentacao_legal": "STF - RE 633782 (Tema 532 de Repercussão Geral).",
+      "pegadinha_da_banca": "Antigamente dizia-se que estatal NUNCA podia multar. O STF autorizou, DESDE QUE seja capital público majoritário, não concorra no mercado e preste serviço público exclusivo."
+    },
+    "id": 103
+  },
+  {
+    "concurso": "Caixa Econômica Federal",
+    "orgao": "CEF",
+    "cargo": "Técnico Bancário Novo",
+    "ano": 2024,
+    "banca": "Cesgranrio",
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Moeda Digital do Banco Central - DREX",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": false,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Diretrizes do Banco Central do Brasil para o Real Digital / Drex",
+    "sumula_ref": "",
+    "enunciado": "O Banco Central do Brasil desenvolveu o projeto da moeda digital brasileira oficial soberana, denominada DREX. A respeito do DREX e de suas características operacionais, assinale a opção correta:",
+    "alternativas": {
+      "A": "O DREX é uma criptomoeda descentralizada e não regulamentada, cuja cotação varia livremente de acordo com a oferta e a demanda internacional.",
+      "B": "Trata-se de uma Central Bank Digital Currency (CBDC), sendo uma representação digital da moeda oficial brasileira com paridade direta de 1:1 com o Real convencional.",
+      "C": "O objetivo primordial do DREX é substituir integralmente o papel-moeda e extinguir o sistema de transferências instantâneas PIX até o ano de 2026.",
+      "D": "A emissão do DREX pode ser realizada privativamente por qualquer instituição bancária autorizada pelo Conselho Monetário Nacional.",
+      "E": "O DREX impede o uso de contratos inteligentes (smart contracts) por razões de sigilo bancário e segurança da informação."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "O Drex é a CBDC brasileira. Não é criptomoeda volátil como Bitcoin; é o próprio Real em formato digital, emitido e custodiado exclusivamente pelo Banco Central (1 Drex = R$ 1,00).",
+      "analise_alternativas": {
+        "A": "Incorreta. O Drex é centralizado, regulado e emitido pelo Banco Central.",
+        "B": "CORRETA. É uma CBDC oficial com valor fixado e garantido na proporção de 1 para 1 com o Real.",
+        "C": "Incorreta. O Drex não substitui o PIX nem extingue o papel-moeda; são ferramentas complementares.",
+        "D": "Incorreta. Apenas o Banco Central tem a prerrogativa constitucional de emitir a moeda.",
+        "E": "Incorreta. Uma das maiores vantagens do Drex é exatamente viabilizar contratos inteligentes (smart contracts) em blockchain."
+      },
+      "fundamentacao_legal": "Comunicação nº 40.528/2023 do Banco Central do Brasil.",
+      "pegadinha_da_banca": "Não confunda DREX com criptomoeda (Bitcoin/Ethereum). O DREX tem valor estável e soberania do Estado brasileiro."
+    },
+    "id": 104
+  },
+  {
+    "concurso": "Caixa Econômica Federal",
+    "orgao": "CEF",
+    "cargo": "Técnico Bancário Novo",
+    "ano": 2024,
+    "banca": "Cesgranrio",
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Prevenção à Lavagem de Dinheiro - COAF e Comunicações Obrigatórias",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Lei nº 9.613/1998, Art. 10 e 11; Circular Bacen 3.978/2020",
+    "sumula_ref": "",
+    "enunciado": "No contexto da Lei nº 9.613/1998 (Crimes de Lavagem ou Ocultação de Bens, Direitos e Valores), as instituições financeiras e bancárias têm o dever legal de comunicar às autoridades reguladoras operações suspeitas. Sobre esse dever, é correto afirmar:",
+    "alternativas": {
+      "A": "A comunicação ao COAF deve ser previamente notificada ao cliente para que ele exerça o contraditório e a ampla defesa.",
+      "B": "As comunicações de boa-fé feitas na forma da lei ao COAF não acarretam responsabilidade civil ou administrativa para a instituição financeira ou seus prepostos.",
+      "C": "Operações em espécie de valor igual ou superior a R$ 2.000,00 devem ser obrigatoriamente comunicadas ao Ministério Público Federal.",
+      "D": "O cliente que constatar erro na comunicação feita pelo banco ao COAF poderá exigir indenização por dano moral in re ipsa da instituição.",
+      "E": "Apenas operações que resultem em denúncia criminal do Ministério Público geram a obrigação de registro cadastral no banco."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "A Lei 9.613/98 protege expressamente o funcionário e o banco que comunicam ao COAF de boa-fé, isentando-os de processos de reparação civil e garantindo sigilo absoluto da comunicação.",
+      "analise_alternativas": {
+        "A": "Incorreta. A comunicação é estritamente SIGILOSA; avisar o cliente é crime/falta grave.",
+        "B": "CORRETA. Literalidade do Art. 11, § 2º da Lei 9.613/1998.",
+        "C": "Incorreta. A comunicação é feita ao COAF/Bacen, e o limite geral de espécie para registro obrigatório é de R$ 50.000,00.",
+        "D": "Incorreta. As comunicações de boa-fé não geram dever de indenizar (Art. 11, § 2º).",
+        "E": "Incorreta. O dever de cadastro e registro independe de qualquer investigação criminal prévia."
+      },
+      "fundamentacao_legal": "Art. 11, § 2º da Lei nº 9.613/1998.",
+      "pegadinha_da_banca": "Lembre-se: 'O cliente NUNCA pode ser avisado de que sua transação foi reportada ao COAF'."
+    },
+    "id": 105
+  },
+  {
+    "concurso": "Banco do Brasil",
+    "orgao": "BB",
+    "cargo": "Escriturário - Agente Comercial",
+    "ano": 2023,
+    "banca": "Cesgranrio",
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Open Finance - Compartilhamento de Dados",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": false,
+    "eh_sumula": false,
+    "dificuldade": "Fácil",
+    "artigo_lei": "Resolução Conjunta nº 1/2020 CMN e BCB",
+    "sumula_ref": "",
+    "enunciado": "O ecossistema do Open Finance (Sistema Financeiro Aberto) no Brasil permite o compartilhamento padronizado de dados, produtos e serviços entre instituições autorizadas pelo Banco Central. O pilar fundamental que rege esse compartilhamento é:",
+    "alternativas": {
+      "A": "O envio compulsório dos dados cadastrais e financeiros de todos os correntistas para uma base única do governo.",
+      "B": "O consentimento prévio, livre, informado, inequívoco e revogável do titular dos dados para finalidades determinadas.",
+      "C": "A venda de dados pessoais financeiros para empresas de publicidade e redes sociais.",
+      "D": "A proibição do cliente de cancelar ou revogar o compartilhamento antes do prazo mínimo de 2 anos.",
+      "E": "A exclusividade do compartilhamento apenas entre bancos públicos e sociedades de economia mista."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "No Open Finance, os dados pertencem ao CLIENTE, não ao banco. O compartilhamento só ocorre se o cliente autorizar expressamente (consentimento), podendo revogar a qualquer momento.",
+      "analise_alternativas": {
+        "A": "Incorreta. Não há compartilhamento compulsório sem consentimento.",
+        "B": "CORRETA. Alinhado com as normas do Bacen e com a LGPD (Lei Geral de Proteção de Dados).",
+        "C": "Incorreta. Totalmente vedada a comercialização de dados.",
+        "D": "Incorreta. O consentimento pode ser revogado a qualquer instante pelo cliente no app.",
+        "E": "Incorreta. O Open Finance abrange bancos públicos, privados, cooperativas, fintechs e instituições de pagamento."
+      },
+      "fundamentacao_legal": "Resolução Conjunta CMN/Bacen nº 1/2020 c/c LGPD (Lei 13.709/2018).",
+      "pegadinha_da_banca": "O cliente é o dono dos seus dados bancários. Ele decide com quem, para quê e por quanto tempo compartilha."
+    },
+    "id": 106
+  },
+  {
+    "concurso": "Instituto Nacional do Seguro Social",
+    "orgao": "INSS",
+    "cargo": "Técnico do Seguro Social",
+    "ano": 2024,
+    "banca": "Cebraspe",
+    "materia": "Seguridade Social",
+    "assunto": "Reforma da Previdência - Pensão por Morte (EC 103/2019)",
+    "nivel": "Médio",
+    "tipo": "certo_errado",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Emenda Constitucional nº 103/2019, Art. 23",
+    "sumula_ref": "",
+    "enunciado": "Julgue o item subsequente com relação às regras instituídas pela Emenda Constitucional nº 103/2019 (Reforma da Previdência):\n\nA pensão por morte concedida a dependente de segurado do Regime Geral de Previdência Social (RGPS) será equivalente a uma cota familiar de 50% do valor da aposentadoria recebida pelo segurado ou daquela a que teria direito se fosse aposentado por incapacidade permanente na data do óbito, acrescida de cotas de 10% por dependente, até o limite máximo de 100%.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "A EC 103/2019 alterou a pensão por morte: agora é cota familiar de 50% + 10% por dependente (viúva sem filhos = 60%; viúva com 1 filho = 70%; viúva com 5 filhos = 100%).",
+      "analise_alternativas": {
+        "C": "CORRETA. Redação literal do Art. 23, caput da EC nº 103/2019.",
+        "E": "Incorreta. Essa é a regra exata e vigente da reforma."
+      },
+      "fundamentacao_legal": "Art. 23 da Emenda Constitucional nº 103/2019.",
+      "pegadinha_da_banca": "A antiga regra pagava 100% integralmente. A nova regra é 50% (cota base) + 10% por dependente, não revertendo a cota do dependente que atinge 21 anos."
+    },
+    "id": 107
+  },
+  {
+    "concurso": "Instituto Nacional do Seguro Social",
+    "orgao": "INSS",
+    "cargo": "Técnico do Seguro Social",
+    "ano": 2024,
+    "banca": "Cebraspe",
+    "materia": "Seguridade Social",
+    "assunto": "Segurados Obrigatórios - Contribuinte Individual e Empregado",
+    "nivel": "Médio",
+    "tipo": "certo_errado",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Fácil",
+    "artigo_lei": "Lei nº 8.213/1991, Art. 11, V",
+    "sumula_ref": "",
+    "enunciado": "Julgue o item a seguir referente aos segurados do RGPS:\n\nO padre, o pastor evangélico e os membros de instituto de vida consagrada que prestam serviços religiosos à sua congregação eclesiástica são enquadrados perante o RGPS, obrigatoriamente, na categoria de contribuintes individuais.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "Líderes religiosos (padres, pastores, rabinos) são considerados contribuintes individuais pelo Art. 11, V, alínea 'c' da Lei 8.213/91, não possuindo vínculo de emprego com a igreja.",
+      "analise_alternativas": {
+        "C": "CORRETA. Previsão expressa do Art. 11, V, 'c' da Lei 8.213/1991 e Decreto 3.048/1999.",
+        "E": "Incorreta. Eles não são empregados nem facultativos, e sim contribuintes individuais obrigatórios."
+      },
+      "fundamentacao_legal": "Art. 11, inciso V, alínea 'c' da Lei nº 8.213/1991.",
+      "pegadinha_da_banca": "Ministros de confissão religiosa são segurados OBRIGATÓRIOS na categoria CONTRIBUINTE INDIVIDUAL."
+    },
+    "id": 108
+  },
+  {
+    "concurso": "Polícia Federal",
+    "orgao": "PF",
+    "cargo": "Agente de Polícia Federal",
+    "ano": 2024,
+    "banca": "Cebraspe",
+    "materia": "Direito Constitucional",
+    "assunto": "Inviolabilidade de Domicílio - Tema 280 STF",
+    "nivel": "Superior",
+    "tipo": "certo_errado",
+    "eh_lei_seca": false,
+    "eh_sumula": true,
+    "dificuldade": "Difícil",
+    "artigo_lei": "CF/88, Art. 5º, XI; Tema 280 STF",
+    "sumula_ref": "Tema 280 STF (RE 603616)",
+    "enunciado": "Acerca dos direitos e garantias fundamentais previstos na CF/88 e da jurisprudência do STF, julgue o item seguinte:\n\nA entrada forçada em domicílio sem mandado judicial, no período noturno, só é lícita quando amparada em fundadas razões, devidamente justificadas a posteriori, que indiquem que dentro da casa ocorre situação de flagrante delito, sob pena de responsabilidade disciplinar, civil e penal do agente ou da autoridade e de nulidade dos atos praticados.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "O STF fixou a tese de que a mera suspeita ou fuga para dentro da casa sem elementos prévios objetivos não autoriza arrombamento de domicílio sem mandado.",
+      "analise_alternativas": {
+        "C": "CORRETA. Tese exata fixada pelo STF no Tema 280 de repercussão geral.",
+        "E": "Incorreta. A tese exige 'fundadas razões justificadas pelas circunstâncias do caso concreto'."
+      },
+      "fundamentacao_legal": "STF - RE 603616 (Tema 280).",
+      "pegadinha_da_banca": "O flagrante nos crimes permanentes (ex: tráfico/depósito de drogas) exige 'justa causa anterior' à invasão; a polícia não pode invadir 'para ver se acha drogas' e justificar depois."
+    },
+    "id": 109
+  },
+  {
+    "concurso": "Tribunal de Contas da União",
+    "orgao": "TCU",
+    "cargo": "Auditor Federal de Controle Externo",
+    "ano": 2024,
+    "banca": "FGV",
+    "materia": "Direito Constitucional",
+    "assunto": "Remédios Constitucionais - Habeas Data vs Mandado de Segurança",
+    "nivel": "Superior",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": true,
+    "dificuldade": "Médio",
+    "artigo_lei": "CF/88, Art. 5º, LXXII; Súmula 2 do STJ",
+    "sumula_ref": "Súmula 2 do STJ",
+    "enunciado": "Cidadão solicita perante determinado órgão público federal certidão com cópia integral de processo licitatório em que não figura como parte, visando exercer fiscalização cidadã sobre os gastos públicos. A repartição indefere o pedido imotivadamente. Para obter a documentação pleiteada, a ação constitucional cabível é o:",
+    "alternativas": {
+      "A": "Habeas Data, por se tratar de pedido de informação perante banco de dados de entidade governamental.",
+      "B": "Mandado de Injunção, ante a ausência de norma regulamentadora sobre transparência governamental.",
+      "C": "Mandado de Segurança, pois a pretensão visa à obtenção de informação de interesse coletivo ou geral, e não de dados pessoais do impetrante.",
+      "D": "Ação Popular, sendo privativa e exclusiva para o fornecimento de certidões administrativas.",
+      "E": "Habeas Corpus coletivo, em razão da violação à liberdade de manifestação e pensamento."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "Habeas Data só serve para informações relativas à PESSOA DO IMPETRANTE (dados personalíssimos). Para informações gerais, certidões ou dados de terceiros, o remédio correto é o Mandado de Segurança.",
+      "analise_alternativas": {
+        "A": "Incorreta. Habeas Data exige que a informação seja sobre a pessoa do próprio requerente.",
+        "B": "Incorreta. Não há omissão legislativa (a LAI regulamenta o tema).",
+        "C": "CORRETA. Direito líquido e certo de obter certidão de interesse geral (Art. 5º, XXXIII e XXXIV, 'b') tutelado por Mandado de Segurança.",
+        "D": "Incorreta. Ação Popular serve para anular ato lesivo ao patrimônio, não para obter certidão.",
+        "E": "Incorreta. Habeas Corpus protege exclusivamente a liberdade de locomoção."
+      },
+      "fundamentacao_legal": "Art. 5º, XXXIII, XXXIV 'b' e LXIX da CF/88 c/c Lei 12.016/2009.",
+      "pegadinha_da_banca": "Clássica pegadinha: 'Pediu informação sua? Habeas Data. Pediu certidão ou informação geral/de interesse público? Mandado de Segurança'."
+    },
+    "id": 110
+  },
+  {
+    "concurso": "Receita Federal do Brasil",
+    "orgao": "RFB",
+    "cargo": "Auditor-Fiscal da Receita Federal",
+    "ano": 2023,
+    "banca": "FGV",
+    "materia": "Língua Portuguesa",
+    "assunto": "Sintaxe de Concordância - Partícula 'SE'",
+    "nivel": "Superior",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": false,
+    "eh_sumula": false,
+    "dificuldade": "Difícil",
+    "artigo_lei": "Gramática Normativa (Concordância Verbal e Voz Passiva)",
+    "sumula_ref": "",
+    "enunciado": "Assinale a opção em que a concordância verbal foi construída em estrita observância à norma-padrão da língua portuguesa:",
+    "alternativas": {
+      "A": "Tratam-se de questões de alta complexidade tributária levantadas pelos auditores fiscais.",
+      "B": "Identificou-se, nos relatórios financeiros preliminares, diversas inconsistências orçamentárias.",
+      "C": "Alugam-se salas comerciais no edifício central para escritórios de assessoria aduaneira.",
+      "D": "Precisa-se de novos técnicos capacitados para atuarem na fiscalização de fronteiras.",
+      "E": "Deve haverem muitos recursos administrativos aguardando julgamento no conselho."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "Em 'Alugam-se salas comerciais', o verbo é Transitivo Direto (VTD) acompanhado do pronome apassivador 'se'. O sujeito paciente é 'salas comerciais' (plural), exigindo o verbo no plural ('salas comerciais são alugadas').",
+      "analise_alternativas": {
+        "A": "Incorreta. 'Trata-se de' é VTI com Índice de Indeterminação do Sujeito. O verbo fica OBRIGATORIAMENTE no singular ('Trata-se de questões').",
+        "B": "Incorreta. O sujeito é 'diversas inconsistências' (plural), logo o correto é 'Identificaram-se diversas inconsistências'.",
+        "C": "CORRETA. 'Alugam-se salas' = 'Salas são alugadas'. Voz passiva sintética com sujeito no plural.",
+        "D": "Incorreta. Embora a oração principal esteja certa, a opção C é o exemplo clássico de concordância perfeita, enquanto em 'precisa-se de... para atuarem' há oscilação de infinitivo flexionado.",
+        "E": "Incorreta. O verbo 'haver' no sentido de existir é impessoal e transmite a impessoalidade ao auxiliar: 'Deve haver' (singular)."
+      },
+      "fundamentacao_legal": "Norma Gramatical - Voz Passiva Sintética vs Índice de Indeterminação do Sujeito.",
+      "pegadinha_da_banca": "VTD + SE = Partícula Apassivadora (concorda com o sujeito). VTI / VI / VL + SE = Índice de Indeterminação (verbo sempre no singular)."
+    },
+    "id": 111
+  },
+  {
+    "concurso": "Banco do Brasil",
+    "orgao": "BB",
+    "cargo": "Escriturário",
+    "ano": 2023,
+    "banca": "Cesgranrio",
+    "materia": "Língua Portuguesa",
+    "assunto": "Regência Verbal e Emprego do Pronome Oblíquo",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": false,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Gramática Normativa (Regência Verbal)",
+    "sumula_ref": "",
+    "enunciado": "A frase que apresenta regência verbal e substituição pronominal adequadas segundo a norma culta é:",
+    "alternativas": {
+      "A": "O gerente assistiu o cliente durante o atendimento e assistiu-lhe com dedicação.",
+      "B": "O assessor informou os novos correntistas sobre as taxas, informando-os de suas vantagens.",
+      "C": "O candidato aspira ao cargo de chefia bancária e aspira-o desde o início da carreira.",
+      "D": "O banco obedece os regulamentos do Banco Central sem questioná-los.",
+      "E": "Ele visou o cheque com a assinatura e visou-lhe para liberação imediata."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "O verbo 'informar' é bitransitivo (VTDI): quem informa, informa algo a alguém (ou informa alguém de/sobre algo). 'Informando-os (objeto direto) de suas vantagens (objeto indireto)' está impecável.",
+      "analise_alternativas": {
+        "A": "Incorreta. No sentido de prestar ajuda, 'assistir' é VTD ('assistiu-o', não 'assistiu-lhe').",
+        "B": "CORRETA. Regência clássica: 'informar alguém (os) de/sobre algo'.",
+        "C": "Incorreta. No sentido de almejar/pretender, 'aspirar' é VTI regido por 'a' ('aspira a ele', e não aceita 'o').",
+        "D": "Incorreta. O verbo 'obedecer' é VTI, exige a preposição 'a' ('obedece aos regulamentos').",
+        "E": "Incorreta. No sentido de colocar visto/rubrica, 'visar' é VTD ('visou-o', não 'visou-lhe')."
+      },
+      "fundamentacao_legal": "Gramática Normativa - Regência dos verbos Informar, Assistir, Aspirar e Obedecer.",
+      "pegadinha_da_banca": "Cuidado com o verbo 'obedecer': no dia a dia as pessoas usam sem preposição, mas para a banca examinadora ele é estritamente VTI ('obedecer A alguém / A algo')."
+    },
+    "id": 112
+  },
+  {
+    "concurso": "Caixa Econômica Federal",
+    "orgao": "CEF",
+    "cargo": "Técnico Bancário Novo - Tecnologia da Informação",
+    "ano": 2024,
+    "banca": "Cesgranrio",
+    "materia": "Segurança da Informação",
+    "assunto": "Golpes Cibernéticos e Engenharia Social - Phishing e Ransomware",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": false,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Cartilha de Segurança para a Internet (CERT.br)",
+    "sumula_ref": "",
+    "enunciado": "Um colaborador de instituição financeira recebe uma mensagem eletrônica fraudulenta com logotipo idêntico ao da intranet corporativa, solicitando a atualização urgente de sua senha de acesso sob pena de bloqueio da conta. Ao clicar no link, ele é direcionado a uma página clonada que captura suas credenciais. Esse tipo de ataque cibernético de engenharia social é classificado como:",
+    "alternativas": {
+      "A": "Ransomware criptográfico.",
+      "B": "Ataque de negação de serviço distribuído (DDoS).",
+      "C": "Phishing.",
+      "D": "Buffer overflow.",
+      "E": "Cavalo de Troia (Trojan) do tipo backdoor."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "Phishing é a técnica de engenharia social que 'pesca' dados e credenciais do usuário induzindo-o ao erro por meio de e-mails, mensagens ou páginas falsas que imitam instituições legítimas.",
+      "analise_alternativas": {
+        "A": "Incorreta. Ransomware é o malware que sequestra arquivos criptografando-os e exigindo resgate.",
+        "B": "Incorreta. DDoS visa sobrecarregar servidores para tirá-los do ar.",
+        "C": "CORRETA. Definição exata de ataque de Phishing.",
+        "D": "Incorreta. Buffer overflow é falha de estouro de memória em programas.",
+        "E": "Incorreta. Trojan backdoor abre portas secretas para controle remoto do sistema."
+      },
+      "fundamentacao_legal": "Cartilha de Segurança do CERT.br - Capítulo Ataques na Internet.",
+      "pegadinha_da_banca": "Phishing = pescar credenciais por engano do usuário. Ransomware = criptografar e cobrar resgate."
+    },
+    "id": 113
+  },
+  {
+    "concurso": "Polícia Rodoviária Federal",
+    "orgao": "PRF",
+    "cargo": "Policial Rodoviário Federal",
+    "ano": 2023,
+    "banca": "Cebraspe",
+    "materia": "Raciocínio Lógico-Matemático",
+    "assunto": "Lógica Proposicional - Equivalência da Condicional",
+    "nivel": "Superior",
+    "tipo": "certo_errado",
+    "eh_lei_seca": false,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Lógica Sentencial e Proposicional",
+    "sumula_ref": "",
+    "enunciado": "Considerando a proposição P: 'Se o motorista consumiu bebida alcoólica, então sua capacidade psicomotora está alterada', julgue o item a seguir:\n\nA proposição 'Se a capacidade psicomotora do motorista não está alterada, então ele não consumiu bebida alcoólica' é logicamente equivalente à proposição P.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "Equivalência contrapositiva da condicional: 'P -> Q' é logicamente idêntico a '~Q -> ~P' (inverte as duas proposições e nega ambas).",
+      "analise_alternativas": {
+        "C": "CORRETA. A contrapositiva de 'Se bebeu -> alterou' é 'Se NÃO alterou -> NÃO bebeu'.",
+        "E": "Incorreta. Essa é uma das principais leis de equivalência lógica mais cobradas pelo Cebraspe."
+      },
+      "fundamentacao_legal": "Regra da Contrapositiva da Implicação Lógica: (P -> Q) <==> (~Q -> ~P).",
+      "pegadinha_da_banca": "Não confunda com inverter sem negar! 'Se alterou, então bebeu' NÃO é equivalente."
+    },
+    "id": 114
+  },
+  {
+    "concurso": "Instituto Nacional do Seguro Social",
+    "orgao": "INSS",
+    "cargo": "Técnico do Seguro Social",
+    "ano": 2023,
+    "banca": "Cebraspe",
+    "materia": "Ética no Serviço Público",
+    "assunto": "Decreto nº 1.171/1994 - Código de Ética Profissional",
+    "nivel": "Médio",
+    "tipo": "certo_errado",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Fácil",
+    "artigo_lei": "Decreto nº 1.171/1994, Seção I, Capítulo I, Item IX",
+    "sumula_ref": "",
+    "enunciado": "A respeito das regras deontológicas constantes do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal (Decreto nº 1.171/1994), julgue o item:\n\nA dignidade, o decoro, o zelo, a eficácia e a consciência dos princípios morais são primados maiores que devem nortear o servidor público, seja no exercício do cargo ou função, ou fora dele, já que seus atos na vida particular poderão acrescer ou diminuir o seu bom conceito na vida funcional.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "A conduta ética do servidor público federal transcende o horário de trabalho. O que ele faz na vida privada reflete diretamente no prestígio do cargo público.",
+      "analise_alternativas": {
+        "C": "CORRETA. Texto literal do inciso I das Regras Deontológicas do Decreto nº 1.171/1994.",
+        "E": "Incorreta. A banca costuma tentar limitar a ética apenas ao ambiente da repartição."
+      },
+      "fundamentacao_legal": "Decreto nº 1.171/1994, Capítulo I, Seção I, Inciso I.",
+      "pegadinha_da_banca": "A banca tenta afirmar que a vida privada do servidor não importa para a Comissão de Ética. ERRADO! A vida particular reflete sim no conceito funcional."
+    },
+    "id": 115
+  },
+  {
+    "concurso": "Tribunal de Justiça de São Paulo",
+    "orgao": "TJ-SP",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2024,
+    "banca": "Vunesp",
+    "materia": "Direito Penal",
+    "assunto": "Crimes contra a Administração Pública - Concussão vs Corrupção Passiva",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Código Penal, Art. 316 e Art. 317",
+    "sumula_ref": "",
+    "enunciado": "Determinado fiscal de posturas municipais, durante vistoria regular em estabelecimento comercial, constata uma infração administrativa menor e, valendo-se expressamente do cargo, EXIGE do comerciante o pagamento imediato de R$ 3.000,00 para não lacrar o imóvel. A conduta praticada pelo agente público amolda-se formalmente ao crime de:",
+    "alternativas": {
+      "A": "Corrupção passiva.",
+      "B": "Prevaricação.",
+      "C": "Concussão.",
+      "D": "Advocacia administrativa.",
+      "E": "Excesso de exação."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "O núcleo do tipo na Concussão (Art. 316 do CP) é o verbo EXIGIR vantagem indevida em razão da função. Na Corrupção Passiva (Art. 317), o verbo é solicitar, receber ou aceitar promessa.",
+      "analise_alternativas": {
+        "A": "Incorreta. Na corrupção passiva o verbo é 'solicitar' ou 'receber', nunca exigir.",
+        "B": "Incorreta. Prevaricação é retardar ou deixar de praticar ato de ofício para satisfazer interesse ou sentimento pessoal.",
+        "C": "CORRETA. 'Exigir... vantagem indevida' é a definição literal do crime de Concussão (Art. 316).",
+        "D": "Incorreta. Advocacia administrativa é patrocinar interesse privado perante a administração.",
+        "E": "Incorreta. Excesso de exação ocorre quando o funcionário exige tributo ou contribuição que sabe indevido."
+      },
+      "fundamentacao_legal": "Art. 316 do Código Penal.",
+      "pegadinha_da_banca": "Dica de ouro: EXIGIR = Concussão. SOLICITAR / RECEBER = Corrupção Passiva. INTERESSE PESSOAL = Prevaricação."
+    },
+    "id": 116
+  },
+  {
+    "concurso": "Polícia Civil de São Paulo",
+    "orgao": "PC-SP",
+    "cargo": "Investigador de Polícia",
+    "ano": 2023,
+    "banca": "Vunesp",
+    "materia": "Direito Penal",
+    "assunto": "Crimes contra a Administração Pública - Peculato",
+    "nivel": "Superior",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Código Penal, Art. 312, caput e § 2º",
+    "sumula_ref": "",
+    "enunciado": "Servidor público que, por negligência ao fechar a repartição no fim do expediente, esquece a porta da tesouraria destrancada, possibilitando que terceiro ingresse no local e subtraia um notebook funcional pertencente ao Estado, pratica:",
+    "alternativas": {
+      "A": "Peculato-apropriação.",
+      "B": "Peculato culposo.",
+      "C": "Fato atípico na esfera penal, restando apenas responsabilidade civil-disciplinar.",
+      "D": "Condescendência criminosa.",
+      "E": "Prevaricação comissiva."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "O funcionário público que, por negligência, imprudência ou imperícia, concorre para que outrem subtraia ou se aproprie de dinheiro ou bem público, comete Peculato Culposo (Art. 312, § 2º).",
+      "analise_alternativas": {
+        "A": "Incorreta. Peculato-apropriação é doloso e o próprio funcionário se apropria do bem.",
+        "B": "CORRETA. Definição estrita do Art. 312, § 2º do Código Penal.",
+        "C": "Incorreta. O peculato culposo é expressamente tipificado no Código Penal.",
+        "D": "Incorreta. Condescendência criminosa é deixar de responsabilizar subordinado por indulgência.",
+        "E": "Incorreta. Não houve satisfação de sentimento pessoal para caracterizar prevaricação."
+      },
+      "fundamentacao_legal": "Art. 312, § 2º do Código Penal.",
+      "pegadinha_da_banca": "Lembre-se: 'A reparação do dano no peculato culposo, se precede à sentença irrecorrível, EXTingue a punibilidade; se lhe é posterior, reduz de metade a pena'."
+    },
+    "id": 117
+  },
+  {
+    "concurso": "Tribunal Regional do Trabalho",
+    "orgao": "TRT",
+    "cargo": "Analista Judiciário",
+    "ano": 2024,
+    "banca": "FCC",
+    "materia": "Direito Administrativo",
+    "assunto": "Atos Administrativos - Atributos (PATI) e Extinção",
+    "nivel": "Superior",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": false,
+    "eh_sumula": true,
+    "dificuldade": "Médio",
+    "artigo_lei": "Súmula 473 do STF",
+    "sumula_ref": "Súmula 473 STF",
+    "enunciado": "A respeito da extinção dos atos administrativos e do princípio da autotutela consagrado na jurisprudência do Supremo Tribunal Federal (Súmula 473), assinale a afirmativa correta:",
+    "alternativas": {
+      "A": "A revogação de um ato administrativo produz efeitos retroativos (ex tunc), desfazendo todas as relações jurídicas pretéritas.",
+      "B": "A anulação decorre de vício de ilegalidade, produz efeitos retroativos (ex tunc), e pode ser declarada pela própria Administração ou pelo Poder Judiciário.",
+      "C": "O Poder Judiciário pode revogar atos administrativos do Poder Executivo quando constatar inconveniência e inoportunidade pública.",
+      "D": "Atos vinculados podem ser livremente revogados a qualquer tempo pelo administrador público.",
+      "E": "A anulação de atos administrativos com vício insanável não admite o direito adquirido nem o respeito a terceiros de boa-fé."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "Anulação = Ilegalidade (efeito retroativo / ex tunc / feita pela Administração ou Judiciário). Revogação = Mérito/Conveniência (efeito prospectivo / ex nunc / feita EXCLUSIVAMENTE pela Administração).",
+      "analise_alternativas": {
+        "A": "Incorreta. Revogação tem efeito NÃO retroativo (ex nunc).",
+        "B": "CORRETA. Síntese exata da Súmula 473 do STF e do Art. 53 da Lei 9.784/1999.",
+        "C": "Incorreta. O Judiciário NUNCA pode revogar ato do Executivo (apenas anular por ilegalidade).",
+        "D": "Incorreta. Atos vinculados não comportam juízo de conveniência/oportunidade, logo NÃO são revogáveis.",
+        "E": "Incorreta. A anulação deve sempre resguardar os direitos dos terceiros de boa-fé."
+      },
+      "fundamentacao_legal": "Súmula 473 do STF c/c Art. 53 da Lei Federal nº 9.784/1999.",
+      "pegadinha_da_banca": "A pegadinha favorita das bancas: 'O Judiciário revogou o ato por conveniência'. FALSO! Judiciário SÓ ANULA atos de outros poderes, jamais revoga."
+    },
+    "id": 118
+  },
+  {
+    "concurso": "Assembleia Legislativa",
+    "orgao": "AL-SP",
+    "cargo": "Analista Legislativo",
+    "ano": 2023,
+    "banca": "Vunesp",
+    "materia": "Direito Administrativo",
+    "assunto": "Regime Jurídico dos Servidores Públicos - Estabilidade e Demissão",
+    "nivel": "Superior",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "CF/88, Art. 41; Lei 8.112/1990",
+    "sumula_ref": "",
+    "enunciado": "Servidor público civil estável que tem sua demissão anulada por decisão judicial transitada em julgado deve ser reintegrado ao cargo. Se o cargo outrora por ele ocupado estiver provido por outro servidor estável, o ocupante da vaga:",
+    "alternativas": {
+      "A": "Será sumariamente exonerado sem qualquer indenização pecuniária.",
+      "B": "Será reconduzido ao cargo de origem, sem direito a indenização, aproveitado em outro cargo ou posto em disponibilidade.",
+      "C": "Será mantido no cargo, enquanto o servidor reintegrado será posto compulsoriamente em disponibilidade remunerada.",
+      "D": "Passará a dividir a remuneração integral com o servidor reintegrado até a criação de nova vaga por lei.",
+      "E": "Será aposentado compulsoriamente por invalidez administrativa."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "Nos termos do Art. 41, § 2º da CF/88, o servidor reintegrado retoma seu cargo. O eventual ocupante que já era estável é reconduzido ao cargo de origem (sem indenização), aproveitado ou posto em disponibilidade.",
+      "analise_alternativas": {
+        "A": "Incorreta. Servidor estável não pode ser sumariamente exonerado nessa hipótese.",
+        "B": "CORRETA. Transcrição literal do Art. 41, § 2º da Constituição Federal de 1988.",
+        "C": "Incorreta. O direito de reassumir o cargo é do servidor que teve a demissão anulada (reintegração).",
+        "D": "Incorreta. Inexiste essa previsão no ordenamento jurídico.",
+        "E": "Incorreta. Aposentadoria não se aplica a essa situação."
+      },
+      "fundamentacao_legal": "Art. 41, § 2º da Constituição Federal de 1988 c/c Art. 28 da Lei 8.112/1990.",
+      "pegadinha_da_banca": "O nome do instituto é REINTEGRAÇÃO (para o demitido que volta) e RECONDUÇÃO (para o que ocupava a vaga e volta ao cargo anterior)."
+    },
+    "id": 119
+  },
+  {
+    "concurso": "Caixa Econômica Federal",
+    "orgao": "CEF",
+    "cargo": "Técnico Bancário Novo",
+    "ano": 2024,
+    "banca": "Cesgranrio",
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Garantias do Sistema Financeiro - Alienação Fiduciária vs Penhor",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Lei nº 9.514/1997 e Código Civil (Art. 1.361)",
+    "sumula_ref": "",
+    "enunciado": "No financiamento imobiliário e nas operações de crédito bancário, a alienação fiduciária em garantia se destaca como um dos instrumentos mais utilizados pelas instituições financeiras. Sobre a alienação fiduciária, é correto afirmar que:",
+    "alternativas": {
+      "A": "O devedor fiduciante transfere ao credor fiduciário a posse direta e a propriedade plena do bem durante todo o contrato.",
+      "B": "O credor fiduciário adquire a propriedade resolúvel e a posse indireta do bem, permanecendo o devedor fiduciante com a posse direta.",
+      "C": "A garantia fiduciária exige obrigatoriamente a execução judicial prévia para a tomada do imóvel em caso de inadimplência.",
+      "D": "O bem gravado com alienação fiduciária pode ser penhorado livremente por dívidas comuns do devedor com outros credores quirografários.",
+      "E": "A quitação da dívida pelo fiduciante não extingue a propriedade resolúvel de pleno direito."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "Na alienação fiduciária, a propriedade é RESOLÚVEL (pertence ao banco até a última parcela), enquanto a posse DIRETA fica com o cliente (que mora no imóvel ou dirige o carro).",
+      "analise_alternativas": {
+        "A": "Incorreta. O devedor fica com a posse direta, e o credor com a posse indireta e propriedade resolúvel.",
+        "B": "CORRETA. Definição jurídica clássica do Art. 1.361 do Código Civil e da Lei 9.514/1997.",
+        "C": "Incorreta. A grande agilidade da Lei 9.514/97 é permitir a execução EXTRAJUDICIAL em cartório.",
+        "D": "Incorreta. O bem pertence ao banco; os outros credores só podem penhorar os direitos aquisitivos do contrato.",
+        "E": "Incorreta. Com o pagamento integral, a propriedade se consolida de pleno direito no patrimônio do devedor."
+      },
+      "fundamentacao_legal": "Lei nº 9.514/1997 e Art. 1.361 do Código Civil.",
+      "pegadinha_da_banca": "Lembre-se: 'O banco tem a propriedade resolúvel e posse indireta. O cliente tem a posse direta'."
+    },
+    "id": 120
+  },
+  {
+    "concurso": "Banco do Brasil",
+    "orgao": "BB",
+    "cargo": "Escriturário",
+    "ano": 2023,
+    "banca": "Cesgranrio",
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Estrutura do SFN - Conselho Monetário Nacional (CMN) vs Banco Central (Bacen)",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Fácil",
+    "artigo_lei": "Lei nº 4.595/1964; Lei Complementar nº 179/2021",
+    "sumula_ref": "",
+    "enunciado": "No Sistema Financeiro Nacional (SFN), a distinção entre órgão normativo e entidade supervisora/executora é essencial. Constitui atribuição precípua e exclusiva do Conselho Monetário Nacional (CMN):",
+    "alternativas": {
+      "A": "Emitir papel-moeda e moeda metálica na forma fixada em lei.",
+      "B": "Fixar as diretrizes e metas da política monetária, inclusive a meta para a inflação.",
+      "C": "Exercer a fiscalização das instituições financeiras e aplicar penalidades cabíveis.",
+      "D": "Realizar operações de redesconto e de empréstimo às instituições financeiras bancárias.",
+      "E": "Executar os serviços do meio circulante nacional."
+    },
+    "gabarito": "B",
+    "comentario": {
+      "resumo": "O CMN é o órgão MÁXIMO e NORMATIVO (ele 'manda/fixa as diretrizes e metas'). O Banco Central é quem EXECUTA e FISCALIZA (ele 'faz').",
+      "analise_alternativas": {
+        "A": "Incorreta. Emitir moeda é competência executiva do Banco Central do Brasil.",
+        "B": "CORRETA. Fixar metas de inflação e diretrizes monetárias é atribuição privativa do CMN.",
+        "C": "Incorreta. Fiscalizar e aplicar multas às instituições financeiras é dever do Banco Central.",
+        "D": "Incorreta. Redesconto bancário é operação executada pelo Banco Central.",
+        "E": "Incorreta. Gerir o meio circulante é competência operacional do Bacen."
+      },
+      "fundamentacao_legal": "Lei Federal nº 4.595/1964, Art. 3º e 4º.",
+      "pegadinha_da_banca": "Macete: 'Verbos normativos (Fixar, Estabelecer, Regular, Determinar diretrizes) = CMN. Verbos operacionais (Emitir, Fiscalizar, Punir, Executar, Custodiar) = Banco Central'."
+    },
+    "id": 121
+  },
+  {
+    "concurso": "Tribunal de Justiça de Minas Gerais",
+    "orgao": "TJ-MG",
+    "cargo": "Oficial Judiciário",
+    "ano": 2024,
+    "banca": "FGV",
+    "materia": "Raciocínio Lógico-Matemático",
+    "assunto": "Lógica Proposicional - Negação de Proposição Composta (Leis de De Morgan)",
+    "nivel": "Médio",
+    "tipo": "multipla_escolha",
+    "eh_lei_seca": false,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "artigo_lei": "Leis de De Morgan",
+    "sumula_ref": "",
+    "enunciado": "A negação lógica correta da proposição 'O processo é digital E o servidor trabalha em regime presencial' é dada por:",
+    "alternativas": {
+      "A": "O processo não é digital E o servidor não trabalha em regime presencial.",
+      "B": "O processo é digital OU o servidor trabalha em regime presencial.",
+      "C": "O processo não é digital OU o servidor não trabalha em regime presencial.",
+      "D": "Se o processo não é digital, então o servidor trabalha em regime presencial.",
+      "E": "O processo é físico E o servidor está de licença médica."
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "Primeira Lei de De Morgan: para negar uma conjunção 'P e Q', nega-se a primeira, nega-se a segunda e troca-se o conectivo 'E' pelo conectivo 'OU': ~(P ^ Q) <==> (~P v ~Q).",
+      "analise_alternativas": {
+        "A": "Incorreta. Negou ambas, mas manteve o conectivo 'E'.",
+        "B": "Incorreta. Trocou o conectivo mas não negou as proposições simples.",
+        "C": "CORRETA. 'Processo NÃO é digital OU servidor NÃO trabalha em regime presencial'.",
+        "D": "Incorreta. A condicional formulada não equivale à negação da conjunção.",
+        "E": "Incorreta. Termos estranhos ao raciocínio formal das proposições primitivas."
+      },
+      "fundamentacao_legal": "Regra de De Morgan para negação de conjunção: ~(P e Q) = (~P ou ~Q).",
+      "pegadinha_da_banca": "O erro mais comum do concurseiro é negar as duas partes e continuar com o 'E'. Lembre-se: 'Negou o E, vira OU'."
+    },
+    "id": 122
+  },
+  {
+    "concurso": "Instituto Nacional do Seguro Social",
+    "orgao": "INSS",
+    "cargo": "Técnico do Seguro Social",
+    "ano": 2024,
+    "banca": "Cebraspe",
+    "materia": "Seguridade Social",
+    "assunto": "Salário de Benefício - Descarte de Menores Contribuições (EC 103/2019)",
+    "nivel": "Médio",
+    "tipo": "certo_errado",
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Difícil",
+    "artigo_lei": "EC nº 103/2019, Art. 26, § 6º",
+    "sumula_ref": "",
+    "enunciado": "A respeito do cálculo dos benefícios previdenciários após a Reforma da Previdência (EC 103/2019), julgue o item seguinte:\n\nÉ permitido ao segurado do RGPS excluir contribuições que resultem em redução do valor da sua aposentadoria, desde que mantido o tempo mínimo de contribuição exigido para o benefício, sendo vedada a utilização dos períodos excluídos para qualquer finalidade no regime previdenciário.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "comentario": {
+      "resumo": "O Art. 26, § 6º da EC 103/2019 criou o descarte de contribuições prejudiciais: se você já cumpriu o tempo mínimo, pode jogar fora as contribuições mais baixas para aumentar a média, mas perde aquele tempo descartado.",
+      "analise_alternativas": {
+        "C": "CORRETA. Previsão literal e inovadora do Art. 26, § 6º da EC 103/2019.",
+        "E": "Incorreta. A regra é amplamente aplicada e vantajosa para elevar a média salarial do segurado."
+      },
+      "fundamentacao_legal": "Art. 26, § 6º da Emenda Constitucional nº 103/2019.",
+      "pegadinha_da_banca": "Atenção: o tempo descartado NÃO pode ser contado para carência nem averbado em outro regime (descartou, sumiu)."
+    },
+    "id": 123
+  },
+  {
+    "materia": "Direito Administrativo",
+    "assunto": "Licitações - Critérios de Julgamento na Lei 14.133/2021",
+    "artigo_lei": "Lei nº 14.133/2021, Art. 33",
+    "banca": "Cesgranrio",
+    "concurso": "Concurso Público Nacional Unificado (CPNU)",
+    "orgao": "MGI",
+    "cargo": "Analista Técnico-Administrativo",
+    "ano": 2024,
+    "enunciado": "A Lei nº 14.133/2021 inovou no rol dos critérios de julgamento das propostas. Assinale a alternativa que apresenta um critério de julgamento EXPRESSAMENTE previsto na Nova Lei de Licitações:",
+    "alternativas": {
+      "A": "Maior retorno econômico.",
+      "B": "Melhor custo-benefício financeiro simplificado.",
+      "C": "Menor taxa administrativa global.",
+      "D": "Maior antiguidade do fornecedor cadastrado.",
+      "E": "Menor índice de liquidez corrente."
+    },
+    "gabarito": "A",
+    "id": 124,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "O Art. 33 da Lei 14.133/2021 estabelece os critérios de julgamento: menor preço, maior desconto, melhor técnica ou conteúdo artístico, técnica e preço, MAIOR RETORNO ECONÔMICO e maior lance.",
+      "analise_alternativas": {
+        "A": "CORRETA. 'Maior retorno econômico' é inovação trazida no Art. 33, V da Lei 14.133/2021, usado em contratos de eficiência.",
+        "B": "Incorreta. Não existe com essa nomenclatura na lei.",
+        "C": "Incorreta. Critério inexistente no rol legal.",
+        "D": "Incorreta. Tempo de empresa não pode ser critério de julgamento.",
+        "E": "Incorreta. Índice de liquidez é critério de habilitação econômico-financeira, não de julgamento de proposta."
+      },
+      "fundamentacao_legal": "Art. 33, inciso V da Lei nº 14.133/2021.",
+      "pegadinha_da_banca": "Atenção: 'Maior retorno econômico' é utilizado prioritariamente nos contratos de eficiência, onde a remuneração depende da economia gerada para os cofres públicos."
+    }
+  },
+  {
+    "materia": "Direito Administrativo",
+    "assunto": "Licitações - Hipóteses de Inexigibilidade de Licitação",
+    "artigo_lei": "Lei nº 14.133/2021, Art. 74",
+    "banca": "FGV",
+    "concurso": "Tribunal de Contas do Estado",
+    "orgao": "TCE",
+    "cargo": "Auditor de Controle Externo",
+    "ano": 2024,
+    "enunciado": "A respeito das contratações diretas na Nova Lei de Licitações (Lei nº 14.133/2021), a contratação de profissional do setor artístico, diretamente ou por meio de empresário exclusivo, desde que consagrado pela crítica especializada ou pela opinião pública, constitui hipótese de:",
+    "alternativas": {
+      "A": "Dispensa de licitação em razão do valor.",
+      "B": "Inexigibilidade de licitação, ante a inviabilidade de competição.",
+      "C": "Dispensa de licitação por emergência cultural.",
+      "D": "Licitação dispensada por lei federal.",
+      "E": "Concurso simplificado com julgamento por jurados."
+    },
+    "gabarito": "B",
+    "id": 125,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "A contratação de artista consagrado é caso clássico de INEXIGIBILIDADE (Art. 74, II), pois o critério é subjetivo e artístico, tornando impossível a competição objetiva de preços.",
+      "analise_alternativas": {
+        "A": "Incorreta. Não é dispensa de licitação.",
+        "B": "CORRETA. Literalidade do Art. 74, inciso II da Lei nº 14.133/2021.",
+        "C": "Incorreta. Emergência é caso de dispensa (Art. 75, VIII), não de artista.",
+        "D": "Incorreta. Licitação dispensada refere-se à alienação de bens públicos (Art. 76).",
+        "E": "Incorreta. Não se confunde com modalidade de concurso."
+      },
+      "fundamentacao_legal": "Art. 74, inciso II da Lei Federal nº 14.133/2021.",
+      "pegadinha_da_banca": "Diferença vital: 'Dispensa = A competição É possível, mas a lei autoriza não licitar. Inexigibilidade = A competição é IMPOSSÍVEL por natureza'."
+    }
+  },
+  {
+    "materia": "Direito Administrativo",
+    "assunto": "Poderes Administrativos - Poder Hierárquico e Delegação",
+    "artigo_lei": "Lei nº 9.784/1999, Art. 13",
+    "banca": "Cebraspe",
+    "concurso": "Ministério Público da União",
+    "orgao": "MPU",
+    "cargo": "Técnico do MPU - Administração",
+    "ano": 2023,
+    "enunciado": "Julgue o item a seguir acerca dos poderes e do processo administrativo federal (Lei nº 9.784/1999):\n\nNão podem ser objeto de delegação a edição de atos de caráter normativo, a decisão de recursos administrativos e as matérias de competência exclusiva do órgão ou autoridade.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "id": 126,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "O Art. 13 da Lei 9.784/99 proíbe expressamente a delegação do famoso mnemônico 'NOREX': NOrMA, REcursos administrativos e competência EXclusiva.",
+      "analise_alternativas": {
+        "C": "CORRETA. Transcrição exata dos três incisos do Art. 13 da Lei 9.784/1999.",
+        "E": "Incorreta. Esses três casos são indelegáveis por força de lei."
+      },
+      "fundamentacao_legal": "Art. 13 da Lei Federal nº 9.784/1999.",
+      "pegadinha_da_banca": "Grave o mnemônico 'CENORA' ou 'NOREX': NÃO se delega: NO (Atos Normativos), RE (Recursos Administrativos) e EX (Competência Exclusiva)."
+    }
+  },
+  {
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Segurança no PIX - Mecanismo Especial de Devolução (MED)",
+    "artigo_lei": "Resolução BCB nº 103/2021 e Resolução BCB nº 1/2020",
+    "banca": "Cesgranrio",
+    "concurso": "Caixa Econômica Federal",
+    "orgao": "CEF",
+    "cargo": "Técnico Bancário Novo",
+    "ano": 2024,
+    "enunciado": "O Mecanismo Especial de Devolução (MED) foi criado pelo Banco Central para aumentar a segurança das transações do PIX. O MED destina-se EXCLUSIVAMENTE aos casos de:",
+    "alternativas": {
+      "A": "Controvérsias comerciais entre comprador e vendedor, como atraso na entrega de mercadoria comprada pela internet.",
+      "B": "Transferências equivocadas por digitação incorreta da chave PIX pelo pagador.",
+      "C": "Fundada suspeita de fraude / golpe ou falha operacional no sistema de tecnologia das instituições participantes.",
+      "D": "Cancelamento voluntário do pagamento pelo pagador após arrependimento em até 7 dias úteis.",
+      "E": "Divergência sobre o valor de serviços prestados por profissionais liberais."
+    },
+    "gabarito": "C",
+    "id": 127,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "O MED só pode ser acionado em caso de FRAUDE/GOLPE ou FALHA OPERACIONAL do banco. Ele NÃO serve para desacordo comercial (produto estragado) nem para erro de digitação do cliente.",
+      "analise_alternativas": {
+        "A": "Incorreta. Desacordo comercial NÃO é coberto pelo MED; deve ser resolvido no Procon ou Justiça.",
+        "B": "Incorreta. Erro de digitação do usuário não autoriza acionamento do MED.",
+        "C": "CORRETA. Definição estrita das normas regulamentares do Banco Central do Brasil.",
+        "D": "Incorreta. O direito de arrependimento do CDC não se confunde com o MED bancário.",
+        "E": "Incorreta. Disputas sobre contratos civis devem ser resolvidas nas vias comuns."
+      },
+      "fundamentacao_legal": "Resolução BCB nº 103/2021 que instituiu o MED no Regulamento do PIX.",
+      "pegadinha_da_banca": "Pegadinha clássica da Cesgranrio: 'Mandei PIX para a chave errada, posso usar o MED?' NÃO! O MED é restrito a FRAUDE/GOLPE ou FALHA DO SISTEMA."
+    }
+  },
+  {
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Produtos de Renda Fixa - CDB, LCI, LCA e Isenção de IR",
+    "artigo_lei": "Lei nº 11.033/2004 e Resolução CMN nº 5.118/2024",
+    "banca": "Cesgranrio",
+    "concurso": "Banco do Brasil",
+    "orgao": "BB",
+    "cargo": "Escriturário - Agente Comercial",
+    "ano": 2023,
+    "enunciado": "A Letra de Crédito Imobiliário (LCI) e a Letra de Crédito do Agronegócio (LCA) são títulos de renda fixa emitidos por instituições financeiras com o intuito de captar recursos para os setores imobiliário e rural. Um dos maiores atrativos desses títulos para as pessoas físicas é:",
+    "alternativas": {
+      "A": "A isenção do Imposto de Renda sobre os rendimentos auferidos por pessoas físicas domiciliadas no Brasil.",
+      "B": "A rentabilidade prefixada obrigatória nunca inferior à variação do Índice Geral de Preços do Mercado (IGP-M).",
+      "C": "A garantia ilimitada e irrestrita concedida pelo Tesouro Nacional em caso de liquidação extrajudicial da instituição emissora.",
+      "D": "A possibilidade de liquidez diária e saque imediato nas primeiras 24 horas após a emissão.",
+      "E": "A imunidade constitucional total à incidência do Imposto sobre Operações Financeiras (IOF)."
+    },
+    "gabarito": "A",
+    "id": 128,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "LCI, LCA, CRI, CRA e Debêntures Incentivadas contam com ISENÇÃO TOTAL de Imposto de Renda para PESSOAS FÍSICAS, sendo cobertos pelo FGC (Fundo Garantidor de Créditos) até o limite de R$ 250 mil por CPF/instituição.",
+      "analise_alternativas": {
+        "A": "CORRETA. Art. 3º, inciso IV da Lei 11.033/2004 garante a isenção de IR para pessoas físicas.",
+        "B": "Incorreta. Podem ser prefixadas, pós-fixadas (DI) ou indexadas à inflação (IPCA).",
+        "C": "Incorreta. A garantia é do FGC (Fundo Garantidor de Créditos) até R$ 250 mil, e não do Tesouro Nacional.",
+        "D": "Incorreta. Possuem prazo mínimo de carência regulamentado pelo CMN/Bacen.",
+        "E": "Incorreta. O IOF pode incidir se resgatado antes de 30 dias (embora a carência impeça esse resgate precoce)."
+      },
+      "fundamentacao_legal": "Lei nº 11.033/2004, Art. 3º, IV c/c Resoluções do CMN.",
+      "pegadinha_da_banca": "Lembre-se: 'LCI e LCA são isentas de IR para PESSOA FÍSICA. Pessoa Jurídica PAGA imposto normalmente na tabela regressiva'."
+    }
+  },
+  {
+    "materia": "Conhecimentos Bancários",
+    "assunto": "Sistema Financeiro Nacional - Órgãos e Entidades Executoras",
+    "artigo_lei": "Lei nº 6.385/1976 (Comissão de Valores Mobiliários - CVM)",
+    "banca": "FGV",
+    "concurso": "Secretaria da Fazenda",
+    "orgao": "SEFAZ",
+    "cargo": "Auditor Fiscal da Receita Estadual",
+    "ano": 2024,
+    "enunciado": "A fiscalização e o desenvolvimento do mercado de valores mobiliários no Brasil (ações, debêntures, fundos de investimento e derivativos) competem privativamente a uma autarquia em regime especial vinculada ao Ministério da Fazenda, denominada:",
+    "alternativas": {
+      "A": "Superintendência de Seguros Privados (SUSEP).",
+      "B": "Conselho Monetário Nacional (CMN).",
+      "C": "Comissão de Valores Mobiliários (CVM).",
+      "D": "Superintendência Nacional de Previdência Complementar (PREVIC).",
+      "E": "Caixa Econômica Federal (CEF)."
+    },
+    "gabarito": "C",
+    "id": 129,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "A CVM (Comissão de Valores Mobiliários) é a guardiã do mercado de capitais: regula bolsas de valores, companhias abertas, corretores de ações e fundos de investimento.",
+      "analise_alternativas": {
+        "A": "Incorreta. SUSEP fiscaliza seguros privados, previdência aberta e capitalização.",
+        "B": "Incorreta. CMN é órgão normativo superior.",
+        "C": "CORRETA. Definição da CVM conforme Lei nº 6.385/1976.",
+        "D": "Incorreta. PREVIC fiscaliza fundos de pensão fechados de previdência complementar.",
+        "E": "Incorreta. A CEF é instituição financeira executora / banco público."
+      },
+      "fundamentacao_legal": "Art. 1º e 8º da Lei Federal nº 6.385/1976.",
+      "pegadinha_da_banca": "Não confunda CVM (mercado de capitais/ações) com SUSEP (seguros) ou PREVIC (previdência fechada)."
+    }
+  },
+  {
+    "materia": "Direito Constitucional",
+    "assunto": "Direitos Fundamentais - Sigilo de Correspondência e Comunicações",
+    "artigo_lei": "CF/88, Art. 5º, XII",
+    "banca": "Cebraspe",
+    "concurso": "Polícia Federal",
+    "orgao": "PF",
+    "cargo": "Agente de Polícia Federal",
+    "ano": 2023,
+    "enunciado": "Julgue o item subsequente com base na Constituição Federal de 1988 e na jurisprudência dos tribunais superiores:\n\nA interceptação telefônica e a interceptação de comunicações telemáticas somente podem ser determinadas por ordem judicial fundamentada, para fins de investigação criminal ou instrução processual penal, nas hipóteses e na forma que a lei estabelecer.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "id": 130,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "O sigilo das comunicações telefônicas é inviolável, salvo por ordem judicial nas hipóteses de investigação criminal ou instrução penal (NUNCA em processo exclusivamente civil ou administrativo).",
+      "analise_alternativas": {
+        "C": "CORRETA. Transcrição exata da parte final do Art. 5º, inciso XII da Constituição de 1988.",
+        "E": "Incorreta. Essa é a garantia constitucional expressa e a reserva de jurisdição absoluta."
+      },
+      "fundamentacao_legal": "Art. 5º, inciso XII da Constituição Federal de 1988 c/c Lei 9.296/1996.",
+      "pegadinha_da_banca": "Interceptação telefônica JAMAIS cabe para processo administrativo disciplinar (PAD) ou ação civil pública como medida originária, apenas para matéria PENAL."
+    }
+  },
+  {
+    "materia": "Direito Constitucional",
+    "assunto": "Administração Pública - Acumulação Remunerada de Cargos Públicos",
+    "artigo_lei": "CF/88, Art. 37, XVI",
+    "banca": "Vunesp",
+    "concurso": "Prefeitura Municipal",
+    "orgao": "PMSP",
+    "cargo": "Procurador do Município",
+    "ano": 2024,
+    "enunciado": "A Constituição Federal estabelece como regra geral a proibição da acumulação remunerada de cargos públicos. No entanto, é constitucionalmente permitida, desde que haja compatibilidade de horários, a acumulação de:",
+    "alternativas": {
+      "A": "Três cargos privativos de profissionais de saúde com profissões regulamentadas.",
+      "B": "Dois cargos de provimento em comissão de direção superior em autarquias distintas.",
+      "C": "Um cargo de professor com outro técnico ou científico.",
+      "D": "Dois cargos de auditor fiscal tributário em entes federativos diferentes.",
+      "E": "Um cargo de policial militar com um cargo administrativo civil de analista judiciário."
+    },
+    "gabarito": "C",
+    "id": 131,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "As únicas 3 exceções constitucionais de acumulação remunerada com compatibilidade de horários são: a) 2 de professor; b) 1 de professor + 1 técnico ou científico; c) 2 privativos de profissionais de saúde.",
+      "analise_alternativas": {
+        "A": "Incorreta. São no máximo DOIS cargos de saúde, nunca três.",
+        "B": "Incorreta. Cargos em comissão exigem dedicação integral (Art. 120 da Lei 8.112).",
+        "C": "CORRETA. Previsão literal do Art. 37, XVI, alínea 'b' da CF/88.",
+        "D": "Incorreta. Cargos fiscais não são acumuláveis.",
+        "E": "Incorreta. Policial militar tem regime especial e dedicação exclusiva."
+      },
+      "fundamentacao_legal": "Art. 37, inciso XVI da Constituição Federal de 1988.",
+      "pegadinha_da_banca": "Mnemônico das Acumulações Permitidas (com compatibilidade de horários): '2 Professores' / '1 Professor + 1 Técnico' / '2 Médicos/Saúde'."
+    }
+  },
+  {
+    "materia": "Seguridade Social",
+    "assunto": "Princípios Constitucionais da Seguridade Social",
+    "artigo_lei": "CF/88, Art. 194, Parágrafo Único",
+    "banca": "Cebraspe",
+    "concurso": "Instituto Nacional do Seguro Social",
+    "orgao": "INSS",
+    "cargo": "Técnico do Seguro Social",
+    "ano": 2023,
+    "enunciado": "Julgue o item a seguir referente aos objetivos e princípios constitucionais da Seguridade Social:\n\nA universalidade da cobertura e do atendimento, a irredutibilidade do valor dos benefícios e a diversidade da base de financiamento constituem princípios e diretrizes norteadores da organização da seguridade social no Brasil.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "id": 132,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "O Art. 194, parágrafo único da CF elenca os 7 princípios basilares: Universalidade, Uniformidade/Equivalência, Seletividade/Distributividade, Irredutibilidade, Equidade no custeio, Diversidade da base de financiamento e Caráter democrático/descentralizado.",
+      "analise_alternativas": {
+        "C": "CORRETA. Todos os três conceitos mencionados constam expressamente dos incisos I, IV e VI do Art. 194.",
+        "E": "Incorreta. São princípios constitucionais incontestáveis da Seguridade Social."
+      },
+      "fundamentacao_legal": "Art. 194, parágrafo único da Constituição Federal de 1988.",
+      "pegadinha_da_banca": "Lembre-se: 'Na Previdência Social a irredutibilidade assegura o valor REAL (reajuste contra inflação). Na Seguridade geral assegura o valor NOMINAL'."
+    }
+  },
+  {
+    "materia": "Seguridade Social",
+    "assunto": "Período de Graça - Manutenção da Qualidade de Segurado",
+    "artigo_lei": "Lei nº 8.213/1991, Art. 15",
+    "banca": "Cebraspe",
+    "concurso": "Instituto Nacional do Seguro Social",
+    "orgao": "INSS",
+    "cargo": "Técnico do Seguro Social",
+    "ano": 2024,
+    "enunciado": "Julgue o item subsequente acerca do período de graça estabelecido pela Lei de Benefícios da Previdência Social:\n\nO segurado empregado que deixar de exercer atividade remunerada abrangida pela previdência social mantém a qualidade de segurado, independentemente de contribuições, por até 12 meses após a cessação das contribuições, prazo que pode ser prorrogado por mais 12 meses se ele tiver pago mais de 120 contribuições mensais sem interrupção que acarrete perda da qualidade de segurado.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "id": 133,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "O período de graça básico é de 12 meses (Art. 15, II). Se tiver +120 contribuições sem perda da qualidade, ganha +12 meses (total 24). Se comprovar desemprego involuntário, ganha mais 12 (podendo chegar a até 36 meses).",
+      "analise_alternativas": {
+        "C": "CORRETA. Transcrição fiel do Art. 15, inciso II c/c § 1º da Lei nº 8.213/1991.",
+        "E": "Incorreta. Essa é a regra clássica de prorrogação do período de graça."
+      },
+      "fundamentacao_legal": "Art. 15, inciso II e § 1º da Lei nº 8.213/1991.",
+      "pegadinha_da_banca": "Tempo máximo do período de graça para desempregado com +120 contribuições: 12 + 12 + 12 = 36 meses (mais o prazo do Art. 15, § 4º que leva até o dia 16 do 2º mês seguinte)."
+    }
+  },
+  {
+    "materia": "Língua Portuguesa",
+    "assunto": "Pontuação - Emprego da Vírgula com Orações Adjetivas",
+    "artigo_lei": "Gramática Normativa (Pontuação)",
+    "banca": "FGV",
+    "concurso": "Tribunal de Justiça",
+    "orgao": "TJ",
+    "cargo": "Analista Judiciário",
+    "ano": 2024,
+    "enunciado": "Analise as duas frases a seguir:\nI. 'Os servidores públicos, que cumpriram as metas estabelecidas, receberam a gratificação de desempenho.'\nII. 'Os servidores públicos que cumpriram as metas estabelecidas receberam a gratificação de desempenho.'\n\nDe acordo com a norma-padrão da língua portuguesa, é correto afirmar que:",
+    "alternativas": {
+      "A": "A frase I indica que apenas uma parcela restrita dos servidores cumpriu as metas.",
+      "B": "A frase II apresenta erro gramatical gravíssimo pela ausência obrigatória de vírgulas.",
+      "C": "A frase I possui sentido explicativo (todos os servidores cumpriram as metas), enquanto a frase II possui sentido restritivo (apenas alguns servidores cumpriram as metas).",
+      "D": "Ambas as frases possuem rigorosamente o mesmo valor semântico e sintático, tratando-se de mera opção estilística do autor.",
+      "E": "Na frase II, a oração adjetiva introduzida por 'que' exerce função sintática de aposto circunstancial."
+    },
+    "gabarito": "C",
+    "id": 134,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "Com vírgulas = Oração Subordinada Adjetiva EXPLICATIVA (generaliza, refere-se a todos). Sem vírgulas = Oração Subordinada Adjetiva RESTRITIVA (limita, restringe a apenas um grupo).",
+      "analise_alternativas": {
+        "A": "Incorreta. Com vírgulas é explicativa e engloba todos os servidores.",
+        "B": "Incorreta. A oração restritiva é perfeitamente correta sem vírgulas.",
+        "C": "CORRETA. Diferença clássica de pontuação: vírgula explica (todos); sem vírgula restringe (alguns).",
+        "D": "Incorreta. A pontuação altera drasticamente o significado semântico do texto.",
+        "E": "Incorreta. A função sintática é de adjunto adnominal da oração subordinada adjetiva."
+      },
+      "fundamentacao_legal": "Gramática Normativa da Língua Portuguesa - Orações Subordinadas Adjetivas Explicativas vs Restritivas.",
+      "pegadinha_da_banca": "A banca adora perguntar: 'A retirada das vírgulas mantém a correção gramatical e o sentido original?' Mantém a correção, mas ALTERA O SENTIDO!"
+    }
+  },
+  {
+    "materia": "Língua Portuguesa",
+    "assunto": "Conjunções Subordinativas e Coordenativas - Valor Semântico",
+    "artigo_lei": "Gramática Normativa (Conjunções)",
+    "banca": "Cesgranrio",
+    "concurso": "Concurso Público Nacional Unificado (CPNU)",
+    "orgao": "MGI",
+    "cargo": "Técnico e Analista",
+    "ano": 2024,
+    "enunciado": "No trecho 'CONQUANTO as medidas fiscais tenham sido duramente criticadas pelos analistas, os indicadores de emprego reagiram positivamente no terceiro trimestre', o termo em destaque expressa sentido de:",
+    "alternativas": {
+      "A": "Causa.",
+      "B": "Concessão.",
+      "C": "Consequência.",
+      "D": "Condição.",
+      "E": "Proporcionalidade."
+    },
+    "gabarito": "B",
+    "id": 135,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "'Conquanto' é uma conjunção subordinativa concessiva (equivale a 'embora', 'ainda que', 'mesmo que', 'apesar de que'). Ela indica uma quebra de expectativa ou fato que não impede a ação principal.",
+      "analise_alternativas": {
+        "A": "Incorreta. Conjunções causais: porque, já que, visto que.",
+        "B": "CORRETA. 'Conquanto' = Embora / Ainda que (concessão).",
+        "C": "Incorreta. Consecutivas: de modo que, de sorte que, tão... que.",
+        "D": "Incorreta. Condicionais: se, caso, desde que.",
+        "E": "Incorreta. Proporcionais: à medida que, ao passo que."
+      },
+      "fundamentacao_legal": "Gramática Normativa - Classificação das Conjunções Subordinativas Concessivas.",
+      "pegadinha_da_banca": "Não confunda 'CONQUANTO' (concessiva = embora) com 'PORQUANTO' (causal/explicativa = porque). Essa é a casca de banana número 1 da Cesgranrio e da FGV!"
+    }
+  },
+  {
+    "materia": "Raciocínio Lógico-Matemático",
+    "assunto": "Tabela-Verdade e Negação da Condicional (Regra do Mané)",
+    "artigo_lei": "Lógica de Proposições",
+    "banca": "Cebraspe",
+    "concurso": "Polícia Rodoviária Federal",
+    "orgao": "PRF",
+    "cargo": "Policial Rodoviário Federal",
+    "ano": 2023,
+    "enunciado": "Julgue o item a seguir referente à lógica sentencial:\n\nA negação lógica da proposição condicional 'Se chove torrencialmente, então a pista fica escorregadia' é dada por: 'Chove torrencialmente E a pista não fica escorregadia'.",
+    "alternativas": {
+      "C": "Certo",
+      "E": "Errado"
+    },
+    "gabarito": "C",
+    "id": 136,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "Para negar uma condicional 'P -> Q', aplica-se a Regra do MaNé: MAntém a primeira (P) E NEga a segunda (~Q). O resultado é 'P ^ ~Q'.",
+      "analise_alternativas": {
+        "C": "CORRETA. Manteve 'chove torrencialmente', trocou pelo conectivo 'E' e negou 'a pista não fica escorregadia'.",
+        "E": "Incorreta. Aplicação perfeita da regra clássica de negação de implicação lógica."
+      },
+      "fundamentacao_legal": "Lógica Proposicional: ~(P -> Q) <==> (P ^ ~Q).",
+      "pegadinha_da_banca": "Nunca negue um 'Se... então' com outro 'Se... então'! A negação de uma condicional NUNCA tem a palavra 'Se'; ela vira uma conjunção 'E'."
+    }
+  },
+  {
+    "materia": "Segurança da Informação",
+    "assunto": "Mecanismos de Segurança - Assinatura Digital e ICP-Brasil",
+    "artigo_lei": "Medida Provisória nº 2.200-2/2001",
+    "banca": "Vunesp",
+    "concurso": "Tribunal de Justiça de São Paulo",
+    "orgao": "TJ-SP",
+    "cargo": "Escrevente Técnico Judiciário",
+    "ano": 2024,
+    "enunciado": "No âmbito do processo judicial eletrônico e da segurança da informação, a assinatura digital baseada em certificado digital emitido no padrão da Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil) garante:",
+    "alternativas": {
+      "A": "Apenas a confidencialidade do arquivo, mas não a integridade do seu conteúdo.",
+      "B": "Autenticidade, integridade das informações e o não repúdio (irretratabilidade), com presunção legal de veracidade.",
+      "C": "A eliminação definitiva da necessidade de backup de segurança em servidores remotos.",
+      "D": "A imunidade total contra invasões de vírus e trojans no computador do assinante.",
+      "E": "A exclusividade de acesso somente pelo criador do documento, impedindo a visualização por terceiros."
+    },
+    "gabarito": "B",
+    "id": 137,
+    "eh_lei_seca": true,
+    "eh_sumula": false,
+    "dificuldade": "Médio",
+    "nivel": "Médio",
+    "sumula_ref": "",
+    "comentario": {
+      "resumo": "A Assinatura Digital garante 3 pilares fundamentais: AUTENTICIDADE (quem assinou é quem diz ser), INTEGRIDADE (o documento não foi adulterado) e NÃO REPÚDIO (o autor não pode negar a autoria).",
+      "analise_alternativas": {
+        "A": "Incorreta. A assinatura não foca em confidencialidade (isso é criptografia assimétrica pura), e sim em integridade e autoria.",
+        "B": "CORRETA. Definição legal da MP 2.200-2/2001 e pilares da segurança da informação.",
+        "C": "Incorreta. Assinatura não tem qualquer relação com rotinas de backup.",
+        "D": "Incorreta. Não funciona como antivírus.",
+        "E": "Incorreta. Qualquer pessoa autorizada pode ler o documento assinado."
+      },
+      "fundamentacao_legal": "Medida Provisória nº 2.200-2/2001, Art. 10 c/c Código Civil.",
+      "pegadinha_da_banca": "Mnemônico dos Pilares da Assinatura Digital: 'AIN' -> Autenticidade, Integridade e Não-repúdio."
+    }
   }
 ]
