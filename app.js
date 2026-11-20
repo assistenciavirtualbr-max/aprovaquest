@@ -1289,7 +1289,7 @@ const TRIAL_CONFIG = {
   DIAS_TESTE: 5,
   CHAVE_STORAGE_INICIO: 'aprovaquest_trial_start_v1',
   CHAVE_STORAGE_VIP: 'aprovaquest_vip_unlocked_v1',
-  CHECKOUT_URL: 'https://wa.me/?text=Ol%C3%A1!%20Quero%20garantir%20meu%20Acesso%20VIP%20Vital%C3%ADcio%20ao%20AprovaQuest%20por%20R$%2029,90!',
+  CHECKOUT_URL: 'https://pay.kiwify.com.br/in4P2aM',
   CHAVES_VALIDAS: [
     'VIP2026',
     'APROVA2026',
